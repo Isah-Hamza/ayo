@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./dist/output.css">
+    <title>AYO</title>
+</head>
+<body>
+    <div class="wrapper w-full">
+        <header class="flex fixed top-0 left-0 z-[100] bg-white justify-between items-center shadow-sm px-[5%] bg-white h-[70px]  w-full">
+            <div class="logo text-2xl font-bold">
+                <a href="/">
+                    <img src="./images/logo.png" alt="logo">
+                </a>
+            </div>
+            <nav data-nav class="fixed lg:static">
+                <ul class="flex items-center space-x-8">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Report</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li ><button class=" cursor-pointer border border-primaryRed rounded-md px-6 py-2">Register</button></li>
+                    <li class="cursor-pointer">
+                        <div class="linear rounded-full w-8 p-2">
+                            <img src="./images/avatar.svg" alt="avatar">
+                        </div>
+                    </li>
+                    <img data-closeBtn src="./images/icon-close.svg" alt="icon-close" class="block lg:hidden absolute right-6 top-1">
+                </ul>
+            </nav>
+            <div data-menu class="btn block lg:hidden">
+                <img src="./images/icon-menu.svg" alt="icon-menu" class="brightness-150 invert w-4 h-4 scale-x-150">
+            </div>
+            <img src="./images/spiral.svg" alt="spiral" class="!absolute left-0 top-0 z-20 w-36 pointer-events-none ">
+            <img src="./images/ellipses.png" alt="spiral" class="!absolute w-6 left-[117px] top-[148px] z-20">
+        </header>
+        <main class="flex flex-col mt-[70px] " >
+            <div class=" bg-customBlack w-full h-[calc(100vh-70px)] ">
+                <section class="lg:pl-[5%] flex flex-col-reverse lg:flex-row items-center lg:items-start text-center lg:text-left justify-between text-white lg:pt-[20vh] " >
+                    <div class="-mt-10 lg:mt-10">
+                        <h2 class=" text-2xl lg:text-4xl leading-snug font-semibold">An Anonymous Crime <br/> Reporting System <br> (ACRS) </h2>
+                        <button class="mt-14 text-white bg-primaryRed px-14 py-3 pb-4 rounded-md" ><span> Report Now </span><span class="text-xl ml-1 ">&rarr;</span> </button>
+                    </div>
+                    <div class="-mt-4 lg:mt-[unset] ml-5 lg:ml-0 w-[500px] h-[372px] relative lg:absolute right-0 scale-[55%] sm:scale-[80%] md:scale-[unset] ">
+                        <img src="/images/blue-rectangle.png" alt="blue-rectangle" class="absolute bottom-[0] -left-5 h-[400px] w-[520px]">
+                        <img src="/images/red-rectangle.png" alt="" class="absolute w-56 -left-10 -top-12 " >
+                        <img src="./images/heroImg.png" alt="hero image" class="w-[500px] absolute " >
+                    </div>
+                </section>
+            </div>
+            <div class="bg-faintRed" >
+                <section class="pt-14 pb-7 px-[5%]">
+                    <h2 class="text-2xl font-bold mb-10">Quick Links</h2>
+                    <div class="flex flex-wrap gap-10 items-center justify-center lg:justify-between">
+                        <div class="relative flex w-[300px] h-44 items-center space-x-4 bg-white rounded-lg shadow-xl p-5 pr-8">
+                            <img src="images/officer.svg" alt="officer" class="" >
+                            <div class="">
+                                <p class="text-xl font-bold">Become an <br> Officer</p>
+                                <p>Join Us</p>
+                            </div>
+                            <img src="images/arrow-right.svg" alt="arrow-right" class="absolute cursor-pointer w-4 right-4 bottom-3" >
+                        </div>
+                        <img src="images/vertical-divider.png" alt="vertical-divider" class="h-56 hidden md:block">
+                        <div class=" relative flex !ml-0 md:ml-10 w-[300px] h-44 items-center space-x-4 bg-white rounded-lg shadow-xl p-5 pr-8">
+                            <img src="images/binoculars.svg" alt="binoculars class="" >
+                            <div class="">
+                                <p class="text-xl font-bold">AYO Fut12</p>
+                                <p>Anonymous Crime <br> Tips</p>
+                            </div>
+                            <img src="images/arrow-right.svg" alt="arrow-right" class="absolute cursor-pointer w-4 right-4 bottom-3" >
+
+                        </div>
+                        <img src="images/vertical-divider.png" alt="vertical-divider" class="h-56 hidden md:block">
+                        <div class=" relative flex !ml-0 md:ml-10 w-[300px] h-44 items-center space-x-4 bg-white rounded-lg shadow-xl p-5 pr-8">
+                            <img src="images/faq.png" alt="officer" class="" >
+                            <div class="">
+                                <p class="text-xl font-bold">FAQs</p>
+                                <p>Know More</p>
+                            </div>
+                            <img src="images/arrow-right.svg" alt="arrow-right" class="absolute cursor-pointer w-4 right-4 bottom-3" >
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div>
+                <section class="px-[5%] pt-14 py-10 overflow-x-hidden">
+                    <div class="mb-10">
+                        <button class="flex items-center space-x-3 border rounded-md px-7 py-2 mx-auto">
+                            <img src="./images/emoji.svg" alt="emoji" class="w-6">
+                            <p class="font-semibold text-lg " >Citizens Feedback</p>
+                            <p class="text-sm" >How can we serve you better?</p>
+                            <img src="images/arrow-right.svg" alt="arrow-right" class="w-4 ml-1">
+                        </button>
+                    </div>
+                    <div class="flex flex-col  lg:flex-row gap-20 items-center lg:items-start " >
+                        <div class="relative w-full sm:w-[320px] lg:w-[unset] ">
+                            <img src="./images/result.png" alt="result" class="w-80"  >
+                            <img src="./images/red-rectangle.png" alt="red-rectangle"  class="absolute z-[-1] w-36 -bottom-7 -right-10" >
+                            <img src="./images/rect-2.png" alt="blue-rectangle" class="absolute z-[-1] top-0 -right-5 h-[400px] " >
+                        </div>
+                        <div class="flex flex-col max-w-[500px] pt-10">
+                            <h2 class="font-bold text-xl mb-4 ">Why We are The Best</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, 
+                                nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. 
+                                Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim... </p>
+                        <button class="mt-6 w-fit mx-auto md:mx-[unset] text-white bg-primaryRed px-14 py-3 rounded-md" > Read More <span class="text-xl">&rarr;</span> </button>           
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="bg-faintRed py-10 mt-10" >
+                <section class="px-[5%]" >
+                    <h2 class="text-2xl font-bold mb-10">Our Blog Posts</h2>
+                    <div class="grid  md:grid-cols-2 lg:grid-cols-3 gap-10">
+                        <div class="flex flex-col p-5 shadow-md rounded-lg bg-white">
+                            <div class="flex flex-1 flex-col border-b border-[gainsboro]">
+                                <img src="./images/blog-1.png" alt="blog-1" class="mb-5">
+                                <p class="font-semibold mb-3">Reported Child Abuse victim reunited with parents</p>
+                                <p class="mb-5">Unity, tolerance key to national security, says Vice President Yemi Osinbajo, yesterday, declared...</p>
+                            </div>
+                            <button class=" font-semibold py-2 mt-3 ml-auto flex items-center space-x-4" >
+                                <span>Read More</span>
+                                <span class="text-xl" >&rarr;</span>
+                            </button>
+                        </div>
+                        <div class=" flex flex-col p-5 shadow-md rounded-lg bg-white">
+                            <div class="flex flex-1 flex-col border-b border-[gainsboro]">
+                                <img src="./images/blog-2.png" alt="blog-1" class="mb-5">
+                                <p class="font-semibold mb-3">Anonymus feedback tools</p>
+                                <p class="mb-5">Unity, tolerance key to national security, says Vice President Yemi Osinbajo, yesterday, declared...</p>
+                            </div>
+                            <button class=" font-semibold py-2 mt-3 ml-auto flex items-center space-x-4" >
+                                <span>Read More</span>
+                                <span class="text-xl" >&rarr;</span>
+                            </button>
+                        </div>
+                        <div class=" flex flex-col p-5 shadow-md rounded-lg bg-white">
+                            <div class="flex flex-1 flex-col border-b border-[gainsboro]">
+                                <img src="./images/blog-3.png" alt="blog-1" class="mb-5">
+                                <p class="font-semibold mb-3">Anonymus feedback tools</p>
+                                <p class="mb-5">Unity, tolerance key to national security, says Vice President Yemi Osinbajo, yesterday, declared...</p>
+                            </div>
+                            <button class=" font-semibold py-2 mt-3 ml-auto flex items-center space-x-4" >
+                                <span>Read More</span>
+                                <span class="text-xl" >&rarr;</span>
+                            </button>
+                        </div>
+                        <div class=" flex flex-col p-5 shadow-md rounded-lg bg-white">
+                            <div class="flex flex-1 flex-col border-b border-[gainsboro]">
+                                <img src="./images/blog-4.png" alt="blog-1" class="mb-5">
+                                <p class="font-semibold mb-3">Reported Child Abuse victim reunited with parents</p>
+                                <p class="mb-5">Unity, tolerance key to national security, says Vice President Yemi Osinbajo, yesterday, declared...</p>
+                            </div>
+                            <button class=" font-semibold py-2 mt-3 ml-auto flex items-center space-x-4" >
+                                <span>Read More</span>
+                                <span class="text-xl" >&rarr;</span>
+                            </button>
+                        </div>
+                        <div class=" flex flex-col p-5 shadow-md rounded-lg bg-white">
+                            <div class="flex flex-1 flex-col border-b border-[gainsboro]">
+                                <img src="./images/blog-2.png" alt="blog-1" class="mb-5">
+                                <p class="font-semibold mb-3">Anonymus feedback tools</p>
+                                <p class="mb-5">Unity, tolerance key to national security, says Vice President Yemi Osinbajo, yesterday, declared...</p>
+                            </div>
+                            <button class=" font-semibold py-2 mt-3 ml-auto flex items-center space-x-4" >
+                                <span>Read More</span>
+                                <span class="text-xl" >&rarr;</span>
+                            </button>
+                        </div>
+                        <div class=" flex flex-col p-5 shadow-md rounded-lg bg-white">
+                            <div class="flex flex-1 flex-col border-b border-[gainsboro]">
+                                <img src="./images/blog-3.png" alt="blog-1" class="mb-5">
+                                <p class="font-semibold mb-3">Anonymus feedback tools</p>
+                                <p class="mb-5">Unity, tolerance key to national security, says Vice President Yemi Osinbajo, yesterday, declared...</p>
+                            </div>
+                            <button class=" font-semibold py-2 mt-3 ml-auto flex items-center space-x-4" >
+                                <span>Read More</span>
+                                <span class="text-xl" >&rarr;</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex w-full justify-center mt-10 space-x-4 items-center mx-auto">
+                        <p class=" cursor-pointer text-primaryRed">1</p>
+                        <p class="cursor-pointer hover:text-primaryRed"> 2</p>
+                        <p  class="cursor-pointer hover:text-primaryRed">3</p>
+                        <p class="scale-y-[1.5] cursor-pointer -mt-1 hover:text-primaryRed">&gt;</p>
+                    </div>
+                </section>
+            </div>
+            <div class="mb-16 h-[580px] overflow-hidden">
+                <section class="">
+                    <img src="./images/review-ellipse.png" alt="review-ellipse" class="absolute right-[17%]" >
+                    <h2 class="text-2xl font-bold text-center mt-14 my-10 ">See What People Are <br class="block sm:hidden" > Saying.</h2>
+                    <div class="max-w-[500px] h-auto  mx-auto cont ">
+                        <div class="swiper mySwiper h-[400px] md:h-[350px] scale-[0.9] sm:scale-[unset] relative">
+                            <div class="swiper-wrapper mt-10 relative">
+                              <div class="swiper-slide relative ">
+                                <img src="./images/hannah.png" alt="hannah" class=" absolute mx-auto left-1/2 -translate-x-1/2 -top-[45px] ">
+                                <h3 class="text-base font-semibold mb-2">Hannah Smith</h3>
+                                <h4 class="mb-1">Victim of Abuse</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim </p>
+                              </div>
+                              <div class="swiper-slide relative ">
+                                <img src="./images/hannah.png" alt="hannah" class=" absolute mx-auto left-1/2 -translate-x-1/2 -top-[45px] ">
+                                <h3 class="text-base font-semibold mb-2">John Doe</h3>
+                                <h4 class="mb-1">Victim of Abuse</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim </p>
+                              </div>
+                              <div class="swiper-slide relative ">
+                                <img src="./images/hannah.png" alt="hannah" class=" absolute mx-auto left-1/2 -translate-x-1/2 -top-[45px] ">
+                                <h3 class="text-base font-semibold mb-2">Samue Elijah</h3>
+                                <h4 class="mb-1">Victim of Abuse</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim </p>
+                              </div>
+                              <div class="swiper-slide relative ">
+                                <img src="./images/hannah.png" alt="hannah" class=" absolute mx-auto left-1/2 -translate-x-1/2 -top-[45px] ">
+                                <h3 class="text-base font-semibold mb-2">Yusuf Ojo</h3>
+                                <h4 class="mb-1">Victim of Abuse</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cursus nibh mauris, nec turpis orci lectus maecenas. Suspendisse sed magna eget nibh in turpis. Consequat duis diam lacus arcu. Faucibus venenatis felis id augue sit cursus pellentesque enim </p>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+                </section>
+            </div>
+            <div class=" mt-16">
+                <section class="px-[5%] relative">
+                    <h2 class="text-2xl font-bold mb-3">NewsLetter</h2>
+                    <p class="pb-24 md:pb-14 text-center md:text-left ">The most effective, anonymous reporting system for crime in the nation.</p>
+                    <div class=" w-full sm:w-[unset] flex flex-col md:flex-row gap-2 items-center absolute left-1/2 -translate-x-1/2 -bottom-[25px] z-10 ">
+                        <input  type="email"  class=" p-3 h-12 w-[90%] sm:w-[400px] rounded-md outline-none border border-[gainsboro]" placeholder="Type your email here" >
+                        <button class="px-10 py-2 h-12 rounded-md bg-primaryRed text-white ">Subscribe</button>
+                    </div>
+                </section>
+                <div class="bg-black !text-[13px] md:!text-sm text-white absolute w-full" >
+                    <section class="text-[rgba(255,255,255,.6)] px-[5%] py-10 pt-24">
+                        <div class="flex justify-between gap-6 flex-wrap  !text-[13px] md:!text-sm ">
+                            <div class="w-full lg:w-fit mx-auto flex lg:block justify-center " ><img src="images/logo-white.png" alt=""></div>
+                            <div>
+                                <p class="text-white font-semibold mb-2" >About</p>
+                                <p class="mb-1">About Us</p>
+                                <p class="mb-1">Career</p>
+                                <p class="mb-1">Services</p>
+                            </div>
+                            <div>
+                                <p class="text-white font-semibold mb-2" >Support</p>
+                                <p class="mb-1">Contact Us</p>
+                                <p class="mb-1">Twitter</p>
+                                <p class="mb-1">LinkedIn</p>
+                            </div>
+                            <div>
+                                <p class="text-white font-semibold mb-2" >FAQs</p>
+                                <p class="mb-1">Account</p>
+                                <p class="mb-1">Tips</p>
+                                <p class="mb-1">Anonymity</p>
+                            </div>
+                            <div>
+                                <p class="text-white font-semibold mb-2" >About</p>
+                                <p class="mb-1">About Us</p>
+                                <p class="mb-1">Blog</p>
+                                <p class="mb-1">Career</p>
+                                <p class="mb-1">Jobs</p>
+                            </div>
+                            <div class="w-full lg:w-fit mx-auto flex lg:block flex-col items-center ">
+                                <p class="text-white font-semibold mb-2" >Social Media</p>
+                                <p class="leading-tight text-center lg:text-left  ">Be the first one to know  about discounts, <br/> offers, news, giveaways and events</p>
+                                <div class="flex mt-5 space-x-4">
+                                    <img class="w-5 cursor-pointer" src="./images/facebook-svgrepo-com.svg" alt="">
+                                    <img class="w-5 cursor-pointer" src="./images/instagram-svgrepo-com.svg" alt="">
+                                    <img class="w-5 cursor-pointer" src="./images/linkedin-svgrepo-com.svg" alt="">
+                                    <img class="w-5 cursor-pointer" src="./images/twitter-svgrepo-com.svg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-center mt-10 text-[rgba(255,255,255,.9)]">©Sulby_ee 1988-2022, All Rights Reserved</p>
+                    </section>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+    var swiper = new Swiper(".mySwiper", {
+    effect: "cards",
+    grabCursor: true,
+  });
+    </script>
+    <script src="./src/script.js"></script>
+</body>
+</html>
