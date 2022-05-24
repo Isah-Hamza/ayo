@@ -60,7 +60,7 @@ footer img{
     }
 }
 @media screen and ( max-width:768px ) {
-    h2{ @apply text-center }
+    h2{ @apply text-center text-xl  }
     p{ @apply text-sm }
     button{ @apply mx-auto }
 }
