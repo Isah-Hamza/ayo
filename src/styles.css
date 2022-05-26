@@ -63,6 +63,7 @@ footer .socials img{
     h2{ @apply text-center text-xl  }
     p{ @apply text-sm }
     button{ @apply mx-auto }
+    footer p{@apply text-[13px]}
 }
 
 .swiper {
