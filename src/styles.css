@@ -37,7 +37,7 @@ section{
     box-shadow: 0 0 7px 5px gray;
     @apply max-w-[370px] md:max-w-[unset]
 }
-footer img{
+footer .socials img{
     @apply w-5 cursor-pointer
 }
 .linear{
