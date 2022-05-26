@@ -1246,6 +1246,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 1.25rem;
 }
 
+.px-\[50px\] {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
 .pb-4 {
   padding-bottom: 1rem;
 }
@@ -1979,6 +1984,26 @@ footer .socials img {
   .xl\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  .xl\:px-\[\] {
+    padding-left: ;
+    padding-right: ;
+  }
+
+  .xl\:px-\[50px\] {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .xl\:px-\[0\] {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .xl\:px-\[50\] {
+    padding-left: 50;
+    padding-right: 50;
   }
 
   .xl\:pl-0 {
