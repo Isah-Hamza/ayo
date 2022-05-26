@@ -6,6 +6,7 @@ module.exports = {
         sm: "480px",
         md: "768px",
         lg: "976px",
+        desktop:"1280px",
         xl: "1440px",
       }, //screen ends here
       colors: {
