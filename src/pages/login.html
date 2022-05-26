@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="../../dist/output.css">
+    <title>AYO | LOGIN</title>
+</head>
+<body>
+    <div class="wrapper w-full">
+        <img src="../../images/spiral.svg" alt="spiral" class="!absolute left-0 top-0 z-20 w-36 pointer-events-none ">
+        <img src="../../images/ellipses.png" alt="spiral" class="!absolute w-6 left-[117px] top-[148px] z-20">
+        <header class="flex fixed top-0 left-0 z-[100] justify-between items-center shadow-sm px-[5%] bg-white h-[70px]  w-full">
+            <div class="logo text-2xl font-bold">
+                <a href="/">
+                    <img src="../../images/logo.png" alt="logo">
+                </a>
+            </div>
+            <nav data-nav class="fixed  lg:static">
+                <ul class="flex items-center space-x-8">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="./report.html">Report</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li class="active"><a href="/">Login</a></li>
+                    <li >
+                        <a href="/src/pages/register.html">
+                            <button class=" cursor-pointer border border-primaryRed rounded-md px-6 py-2">Register</button>
+                        </a>
+                    </li>
+                    <li class="cursor-pointer hidden lg:block ">
+                        <div class="linear rounded-full w-8 p-2">
+                            <img src="../../images/avatar.svg" alt="avatar">
+                        </div>
+                    </li>
+                    <img data-closeBtn src="../../images/icon-close.svg" alt="icon-close" class="block lg:hidden absolute right-6 top-1">
+                </ul>
+                <div class="flex fixed bottom-0 justify-between px-10 bg-black  p-5 w-5/6 left-0 lg:hidden mt-5 space-x-4">
+                    <img class="w-5 cursor-pointer" src="../../images/facebook-svgrepo-com.svg" alt="">
+                    <img class="w-5 cursor-pointer" src="../../images/instagram-svgrepo-com.svg" alt="">
+                    <img class="w-5 cursor-pointer" src="../../images/linkedin-svgrepo-com.svg" alt="">
+                    <img class="w-5 cursor-pointer" src="../../images/twitter-svgrepo-com.svg" alt="">
+                </div>
+            </nav>
+            <div data-menu class="btn block lg:hidden cursor-pointer">
+                <img src="../../images/icon-menu.svg" alt="icon-menu" class="brightness-150 invert w-4 h-4 scale-x-150">
+            </div>
+            
+        </header>
+        <main class="flex flex-col mt-[70px] " >
+            <div class=" bg-customBlack w-full h-[calc(100vh-70px)] lg:h-[450px] relative flex justify-around items-center ">
+            </div>
+            <div class="-mt-40 lg:mt-[unset] mx-3 lg:mx-[unset] ">
+                <section class="relative max-w-[550px] bg-white -translate-y-60 pt-24 lg:pt-36 pb-20 px-[5%] xl:px-0 min-h-[700px] shadow-md rounded-sm ">
+                    <span class=" cursor-pointer absolute right-5 lg:right-10 top-2 lg:top-10 text-[45px]" >&times;</span>
+                    <div><img class="mx-auto" src="../../images/logo.png" alt="logo"></div>
+                    <div class="mt-10">
+                        <h2 class="text-2xl font-bold text-center mb-2">Login to your Account</h2>
+                        <p class="text-center mb-5">Welcome back, please enter your details</p>
+                        <button class="flex border border-[gainsboro] mb-8 rounded-md py-3 px-5 w-full gap-5 items-center justify-center text-center">
+                            <img src="../../images/Google__G__Logo 1.png" alt="google">
+                            <span> Continue with Google   </span>
+                        </button>
+                        <div class="flex items-center mb-8">
+                            <div class="h-[1px] bg-[gainsboro] flex-1" ></div>
+                            <span class="mx-4"> OR </span>
+                            <div class="h-[1px] bg-[gainsboro] flex-1" ></div>
+                        </div>
+                        <div class="flex flex-col gap-1 mb-3 ">
+                            <label class="font-semibold" for="email">Email</label>
+                            <input class="p-3 outline-[#1676F3] outline-1 rounded-md border border-[gainsboro]" type="text" placeholder="Johndoe@gmail.com" id="email" name="email"  >
+                        </div>
+                        <div  class="relative flex flex-col gap-1 mb-3 ">
+                            <label class="font-semibold" for="password">Password</label>
+                            <div class="relative w-full ">
+                                <input class="p-3 w-full outline-[#1676F3] outline-1 rounded-md border border-[gainsboro]" type="text" placeholder="Enter password here" id="password" name="password"  >
+                                <img src="../../images/eye.svg" alt="eye" class=" cursor-pointer absolute top-1/2 -translate-y-1/2 right-3">
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mt-2">
+                            <div>
+                                <input type="checkbox" checked name="remember_me" id="remember_me" >
+                                <label class="text-sm" for="remember_me">Remember Me</label>
+                            </div>
+                            <p class="font-semibold text-sm" >Forgot Password?</p>
+                        </div>
+                        <button class="w-full mt-8 mb-2 p-3 border border-[gainsboro] rounded-md bg-primaryRed text-white " >Login</button>
+                        <p class="text-center text-sm" >Don't have an account? <span class="font-bold text-[#1676F3]">
+                           <a href="../pages/register.html">Sign Up</a> </span> </p>
+                    </div>
+                </section>
+            </div>
+            <div class=" -mt-36 px-3">
+                <section class="px-[5%] xl:px-0 relative">
+                    <h2 class="text-2xl font-bold mb-5 lg:mb-2">NewsLetter</h2>
+                    <p class="pb-28 md:pb-14 my-2 text-center md:text-left ">The most effective, anonymous reporting system for crime in the nation.</p>
+                    <div class=" w-full sm:w-[unset] flex flex-col md:flex-row gap-2 items-center absolute left-1/2 -translate-x-1/2 -bottom-[30px] z-10 ">
+                        <input  type="email"  class="text-sm p-3 h-12 w-[90%] sm:w-[400px] rounded-md outline-none border border-[gainsboro]" placeholder="Type your email here" >
+                        <button class="px-10 py-2 h-12 rounded-md bg-primaryRed text-white text-sm lg:text-base ">Subscribe</button>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer class="bg-black !text-[13px] md:!text-sm text-white absolute w-full" >
+            <section class="text-[rgba(255,255,255,.6)] px-[5%] xl:px-0 py-10 pt-24">
+                <div class="flex justify-between gap-6 flex-wrap  !text-[13px] md:!text-sm ">
+                    <div class="w-full lg:w-fit mb-5 mx-auto flex lg:block justify-center " ><img src="../../images/logo-white.png" alt=""></div>
+                    <div>
+                        <p class="text-white font-semibold mb-2" >About</p>
+                        <p class="mb-1">About Us</p>
+                        <p class="mb-1">Career</p>
+                        <p class="mb-1">Services</p>
+                    </div>
+                    <div>
+                        <p class="text-white font-semibold mb-2" >Support</p>
+                        <p class="mb-1">Contact Us</p>
+                        <p class="mb-1">Twitter</p>
+                        <p class="mb-1">LinkedIn</p>
+                    </div>
+                    <div>
+                        <p class="text-white font-semibold mb-2" >FAQs</p>
+                        <p class="mb-1">Account</p>
+                        <p class="mb-1">Tips</p>
+                        <p class="mb-1">Anonymity</p>
+                    </div>
+                    <div>
+                        <p class="text-white font-semibold mb-2" >About</p>
+                        <p class="mb-1">About Us</p>
+                        <p class="mb-1">Blog</p>
+                        <p class="mb-1">Career</p>
+                        <p class="mb-1">Jobs</p>
+                    </div>
+                    <div class="socials w-full lg:w-fit mx-auto flex lg:block flex-col items-center ">
+                        <p class="text-white font-semibold mb-2" >Social Media</p>
+                        <p class="leading-tight text-center lg:text-left  ">Be the first one to know  about discounts, <br/> offers, news, giveaways and events.</p>
+                        <div class="flex mt-5 space-x-4">
+                            <img class="w-5 cursor-pointer" src="../../images/facebook-svgrepo-com.svg" alt="">
+                            <img class="w-5 cursor-pointer" src="../../images/instagram-svgrepo-com.svg" alt="">
+                            <img class="w-5 cursor-pointer" src="../../images/linkedin-svgrepo-com.svg" alt="">
+                            <img class="w-5 cursor-pointer" src="../../images/twitter-svgrepo-com.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center mt-10 text-[rgba(255,255,255,.9)]">©Sulby_ee 1988-2022, All Rights Reserved</p>
+            </section>
+        </footer>
+    </div>
+    <script src="../../src/script.js"></script>
+</body>
+</html>
