@@ -734,6 +734,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1rem;
 }
 
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
 .-mt-40 {
   margin-top: -10rem;
 }
@@ -760,6 +764,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .mb-6 {
   margin-bottom: 1.5rem;
+}
+
+.mb-7 {
+  margin-bottom: 1.75rem;
 }
 
 .block {
@@ -818,20 +826,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 3rem;
 }
 
-.h-\[1px\] {
-  height: 1px;
-}
-
-.h-screen {
-  height: 100vh;
-}
-
 .h-\[300px\] {
   height: 300px;
 }
 
 .h-\[320px\] {
   height: 320px;
+}
+
+.h-\[1px\] {
+  height: 1px;
+}
+
+.h-screen {
+  height: 100vh;
 }
 
 .\!h-52 {
@@ -892,16 +900,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 90%;
 }
 
-.\!w-screen {
-  width: 100vw !important;
-}
-
 .\!w-full {
   width: 100% !important;
 }
 
 .w-\[170\%\] {
   width: 170%;
+}
+
+.\!w-screen {
+  width: 100vw !important;
 }
 
 .w-max {
@@ -1039,6 +1047,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 1.5rem;
 }
 
+.gap-16 {
+  gap: 4rem;
+}
+
+.gap-\[10\%\] {
+  gap: 10%;
+}
+
 .gap-5 {
   gap: 1.25rem;
 }
@@ -1049,14 +1065,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .gap-3 {
   gap: 0.75rem;
-}
-
-.gap-16 {
-  gap: 4rem;
-}
-
-.gap-4 {
-  gap: 1rem;
 }
 
 .space-x-8 > :not([hidden]) ~ :not([hidden]) {
@@ -1133,6 +1141,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-\[gainsboro\] {
   --tw-border-opacity: 1;
   border-color: rgb(220 220 220 / var(--tw-border-opacity));
+}
+
+.border-b-\[gainsboro\] {
+  --tw-border-opacity: 1;
+  border-bottom-color: rgb(220 220 220 / var(--tw-border-opacity));
 }
 
 .bg-white {
@@ -1230,6 +1243,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 0.75rem;
 }
 
+.py-14 {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -1248,11 +1266,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-\[10px\] {
   padding-top: 10px;
   padding-bottom: 10px;
-}
-
-.py-14 {
-  padding-top: 3.5rem;
-  padding-bottom: 3.5rem;
 }
 
 .px-2 {
@@ -1346,13 +1359,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 13px !important;
 }
 
-.text-\[45px\] {
-  font-size: 45px;
-}
-
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-\[45px\] {
+  font-size: 45px;
 }
 
 .text-\[10px\] {
@@ -1417,6 +1430,10 @@ Ensure the default browser behavior of the `hidden` attribute.
           text-decoration-line: underline;
 }
 
+.opacity-80 {
+  opacity: 0.8;
+}
+
 .shadow-sm {
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
@@ -1460,6 +1477,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 :root{
   --indicator-width: 100px;
+  --questionHeight: 1px;
   scroll-padding-top: 70px;
 }
 
@@ -1470,6 +1488,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hide_identity{
   background: linear-gradient(180deg, #ECECEC 17.71%, #C9C9C9 90.44%);
   /* box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.35); */
+}
+
+.question-body{
+  transition: all .5s ease-in-out;
+  height: 0;
+  overflow: hidden;
+  margin-top: -10px !important;
+}
+
+.question-body.open{
+  margin-top: 0 !important;
 }
 
 .circle {
@@ -1674,7 +1703,7 @@ footer .socials img {
     line-height: 1.75rem;
   }
 
-  p, label {
+  p, label, .faq h3 {
     font-size: 0.875rem;
     line-height: 1.25rem;
   }
@@ -1863,6 +1892,22 @@ footer .socials img {
     margin-left: 2.5rem;
   }
 
+  .md\:mt-10 {
+    margin-top: 2.5rem;
+  }
+
+  .md\:mb-10 {
+    margin-bottom: 2.5rem;
+  }
+
+  .md\:mt-14 {
+    margin-top: 3.5rem;
+  }
+
+  .md\:mt-8 {
+    margin-top: 2rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -2036,12 +2081,12 @@ footer .socials img {
     padding-top: 2.5rem;
   }
 
-  .lg\:pt-36 {
-    padding-top: 9rem;
-  }
-
   .lg\:pb-\[unset\] {
     padding-bottom: unset;
+  }
+
+  .lg\:pt-36 {
+    padding-top: 9rem;
   }
 
   .lg\:text-left {

@@ -4,6 +4,7 @@
 
 :root{
   --indicator-width: 100px;
+  --questionHeight: 1px;
   scroll-padding-top: 70px;
 }
 
@@ -14,6 +15,17 @@
   background: linear-gradient(180deg, #ECECEC 17.71%, #C9C9C9 90.44%);
   /* box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.35); */
 }
+
+.question-body{ 
+  transition: all .5s ease-in-out;
+  height: 0;
+  overflow: hidden;
+  margin-top: -10px !important;
+ }
+ .question-body.open{
+   margin-top: 0 !important;
+ }
+ 
 .circle{ @apply flex relative h-8 lg:h-12 w-8 lg:w-12 rounded-full border border-[gainsboro] justify-center items-center  }
 .indicator{ 
   width: 128px;
@@ -70,7 +82,7 @@ footer .socials img{
 }
 @media screen and ( max-width:768px ) {
     h2{ @apply text-center text-xl  }
-    p, label{ @apply text-sm }
+    p, label, .faq h3{ @apply text-sm }
     button{ @apply mx-auto }
     footer p{@apply text-[13px]}
     .indicator{ width: 85px; }

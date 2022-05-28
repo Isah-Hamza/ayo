@@ -18,10 +18,36 @@ var selectFile = document.querySelector('[data-selectFile]');
 var selectedFile = document.querySelector('[data-selectedFile]');
 var submitReportOverlay = document.querySelector('[data-overlay]');
 var closeReportOverlay = document.querySelector('[data-closeOverlay]');
+var questionHeaders = document.querySelectorAll('[data-questionHeader]');
+var questionBodys = document.querySelectorAll('[data-questionBody]');
 var pickedFile;
-// selectFile?.addEventListener('click', () => {
-//     console.log(selectedFile)
+// start faq    
+// questionHeader?.addEventListener('click', () => {
+//     questionBody.classList.toggle('open');
+//     if(questionBody.classList.contains('open'))
+//         questionBody.setAttribute('style', `height:${questionBody.scrollHeight}px`)
+//     else
+//         questionBody.setAttribute('style', `height:0px`)
+//     const plusIcon = questionHeader.querySelector('[data-plus]');
+//     const timesIcon = questionHeader.querySelector('[data-times]');
+//     plusIcon.classList.toggle('hide');
+//     timesIcon.classList.toggle('hide');
 // })
+questionHeaders === null || questionHeaders === void 0 ? void 0 : questionHeaders.forEach(function (header) {
+    header.addEventListener('click', function () {
+        var qstnBody = header.parentElement.children[1];
+        qstnBody.classList.toggle('open');
+        if (qstnBody.classList.contains('open'))
+            qstnBody.setAttribute('style', "height:".concat(qstnBody.scrollHeight, "px"));
+        else
+            qstnBody.setAttribute('style', "height:0px");
+        var plusIcon = header.querySelector('[data-plus]');
+        var timesIcon = header.querySelector('[data-times]');
+        plusIcon.classList.toggle('hide');
+        timesIcon.classList.toggle('hide');
+    });
+});
+// end faq  
 closeReportOverlay === null || closeReportOverlay === void 0 ? void 0 : closeReportOverlay.addEventListener('click', function () {
     submitReportOverlay.classList.toggle('hide');
 });

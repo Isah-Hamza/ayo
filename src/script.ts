@@ -19,15 +19,42 @@ const selectFile  = document.querySelector('[data-selectFile]') as HTMLInputElem
 const selectedFile = document.querySelector('[data-selectedFile]') as HTMLParagraphElement ;
 const submitReportOverlay = document.querySelector('[data-overlay]') as HTMLDivElement ;
 const closeReportOverlay = document.querySelector('[data-closeOverlay]');
-
+const questionHeaders = document.querySelectorAll('[data-questionHeader]');
+const questionBodys = document.querySelectorAll('[data-questionBody]');
 
 let pickedFile:File;
 
-// selectFile?.addEventListener('click', () => {
-//     console.log(selectedFile)
+
+// start faq    
+// questionHeader?.addEventListener('click', () => {
+//     questionBody.classList.toggle('open');
+//     if(questionBody.classList.contains('open'))
+//         questionBody.setAttribute('style', `height:${questionBody.scrollHeight}px`)
+//     else
+//         questionBody.setAttribute('style', `height:0px`)
+//     const plusIcon = questionHeader.querySelector('[data-plus]');
+//     const timesIcon = questionHeader.querySelector('[data-times]');
+//     plusIcon.classList.toggle('hide');
+//     timesIcon.classList.toggle('hide');
 // })
 
 
+questionHeaders?.forEach(header => {
+    header.addEventListener('click', () => {
+        const qstnBody = header.parentElement.children[1];
+        qstnBody.classList.toggle('open')
+        if(qstnBody.classList.contains('open'))
+            qstnBody.setAttribute('style', `height:${qstnBody.scrollHeight}px`)
+        else
+            qstnBody.setAttribute('style', `height:0px`)
+        const plusIcon = header.querySelector('[data-plus]');
+        const timesIcon = header.querySelector('[data-times]');
+        plusIcon.classList.toggle('hide');
+        timesIcon.classList.toggle('hide');
+    })
+})
+
+// end faq  
 
 closeReportOverlay?.addEventListener('click', () => {
     submitReportOverlay.classList.toggle('hide');
