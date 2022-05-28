@@ -2,8 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
+:root{
+  --indicator-width: 100px;
+  scroll-padding-top: 70px;
 }
+
+.hide{
+  @apply hidden
+}
+.circle{ @apply flex relative h-8 lg:h-12 w-8 lg:w-12 rounded-full border border-[gainsboro] justify-center items-center  }
+.indicator{ 
+  width: 128px;
+  height: 1px;
+  background-color: gainsboro;
+}
+.group.active > .circle { @apply border-primaryRed !text-primaryRed }
 nav ul li{
     position: relative;
 }
@@ -11,17 +24,7 @@ nav ul li a,
 footer a{
     @apply  transition-all duration-700 ease-in-out no-underline
 }
-/* li.active::before{
-    position: absolute;
-    content: '';
-    display: block;
-    width: 70%;
-    height: 1.5px;
-    left: 50%;
-    transform: translateX(-50%);
-    top:27px;
-    @apply bg-gold;
-} */
+
 li.active a{
     
     @apply text-primaryRed
@@ -33,6 +36,8 @@ section{
     max-width: 1200px;
     @apply mx-auto
 }
+section textarea{ height: 200px;}
+
 .service-card{
     box-shadow: 0 0 7px 5px gray;
     @apply max-w-[370px] md:max-w-[unset]
@@ -64,11 +69,10 @@ footer .socials img{
     p{ @apply text-sm }
     button{ @apply mx-auto }
     footer p{@apply text-[13px]}
+    .indicator{ width: 85px; }
 }
 
 .swiper {
-    /* width: 240px; */
-    /* height: 320px; */
     margin-inline:auto;
     width: 100%;
     display: flex;

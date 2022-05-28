@@ -50,114 +50,362 @@
             
         </header>
         <main class="flex flex-col mt-[70px] " >
-            <div class=" bg-customBlack w-full h-[calc(100vh-70px)] lg:h-[450px] relative flex justify-around items-center ">
-                <section class="!w-full gap-16 lg:gap-0 pb-10 lg:pb-[unset] lg:pl-[5%] xl:pl-0 flex  lg:grid grid-cols-[1fr,1fr] flex-col-reverse lg:flex-row items-center lg:items-start text-center lg:text-left justify-between text-white  " >
-                    <div class="lg:mt-10">
-                        <h2 class="text-3xl lg:text-4xl leading-snug font-semibold">Ayo help you provide <br> security while keeping <br> you safe</h2>
-                        <button class="mt-14 text-white bg-primaryRed px-14 py-3 pb-4 rounded-md" ><span> Report Now </span><span class="text-xl ml-1 ">&rarr;</span> </button>
-                    </div>
-                    <div class="-mt-4 lg:mt-[unset] ml-5 lg:ml-0 relative lg:absolute w-[170%] sm:w-[500px] h-[300px] right-0 bottom-0 scale-[55%] sm:scale-[80%] md:scale-[unset] ">
-                        <img src="../../images/blue-rectangle.png" alt="blue-rectangle" class="absolute bottom-[0] -left-5 h-[320px] w-[520px]">
-                        <img src="../../images/red-rectangle.png" alt="" class="absolute w-56 -left-10 -top-12 " >
-                        <img src="../../images/about-faq.png" alt="about-faq" class="w-full sm:w-[500px] absolute " >
-                    </div>
-                </section>
+            <div class="" data-report="false">
+                <div class=" bg-customBlack w-full h-[calc(100vh-70px)] lg:h-[450px] relative flex justify-around items-center ">
+                    <section class="!w-full gap-16 lg:gap-0 pb-10 lg:pb-[unset] lg:pl-[5%] xl:pl-0 flex  lg:grid grid-cols-[1fr,1fr] flex-col-reverse lg:flex-row items-center lg:items-start text-center lg:text-left justify-between text-white  " >
+                        <div class="lg:mt-10">
+                            <h2 class="text-3xl lg:text-4xl leading-snug font-semibold">Ayo help you provide <br> security while keeping <br> you safe</h2>
+                            <button class="mt-14 text-white bg-primaryRed px-14 py-3 pb-4 rounded-md" ><span> Report Now </span><span class="text-xl ml-1 ">&rarr;</span> </button>
+                        </div>
+                        <div class="-mt-4 lg:mt-[unset] ml-5 lg:ml-0 relative lg:absolute w-[170%] sm:w-[500px] h-[300px] right-0 bottom-0 scale-[55%] sm:scale-[80%] md:scale-[unset] ">
+                            <img src="../../images/blue-rectangle.png" alt="blue-rectangle" class="absolute bottom-[0] -left-5 h-[320px] w-[520px]">
+                            <img src="../../images/red-rectangle.png" alt="" class="absolute w-56 -left-10 -top-12 " >
+                            <img src="../../images/about-faq.png" alt="about-faq" class="w-full sm:w-[500px] absolute " >
+                        </div>
+                    </section>
+                </div>
+                <div class="py-14">
+                    <section class="px-[5%] xl:px-0 max-w-[800px]" >
+                        <h2 class="text-2xl font-bold mb-5 lg:mb-2 text-center">You are the protector of your community. <br class="hidden sm:block"> We keep your personal information private.</h2>
+                        <p class="text-center">WeTip is dedicated to offering the nation's most effective anonymous reporting service. When you submit
+                            a report, we promise and ensure complete confidentiality and anonymity. All information is shared with 
+                            your company, as well as local, state, federal, and international law enforcement organizations, in order 
+                            to communicate information about criminal activities in your area.</p>
+                            <button data-report_case_btn type='button' class="flex gap-2 mx-auto mt-5 items-center px-10 py-2 h-12 rounded-md bg-primaryRed text-white text-sm lg:text-base " ><span>Report A Case</span> <span class="text-2xl block -mt-1">&rarr;</span>  </button>
+                        </section>
+                </div>
+                <div class="bg-faintRed py-10 " >
+                    <section class="px-[5%] xl:px-0" >
+                        <h2 class="text-2xl font-bold mb-10">Our Blog Posts</h2>
+                        <div class="grid  md:grid-cols-2 lg:grid-cols-3 gap-10">
+                            <div class="flex flex-col p-5 shadow-md rounded-lg bg-white">
+                                <div class="flex flex-1 flex-col border-b border-[gainsboro]">
+                                    <img src="../../images/blog-1.png" alt="blog-1" class="mb-5">
+                                    <p class="font-semibold mb-3">Reported Child Abuse victim reunited with parents</p>
+                                    <p class="mb-5">Unity, tolerance key to national security, says Vice President Yemi Osinbajo, yesterday, declared...</p>
+                                </div>
+                                <button class=" font-semibold py-2 mt-3 ml-auto flex items-center space-x-4" >
+                                    <span>Read More</span>
+                                    <span class="text-xl" >&rarr;</span>
+                                </button>
+                            </div>
+                            <div class=" flex flex-col p-5 shadow-md rounded-lg bg-white">
+                                <div class="flex flex-1 flex-col border-b border-[gainsboro]">
+                                    <img src="../../images/blog-2.png" alt="blog-1" class="mb-5">
+                                    <p class="font-semibold mb-3">Anonymus feedback tools</p>
+                                    <p class="mb-5">Unity, tolerance key to national security, says Vice President Yemi Osinbajo, yesterday, declared...</p>
+                                </div>
+                                <button class=" font-semibold py-2 mt-3 ml-auto flex items-center space-x-4" >
+                                    <span>Read More</span>
+                                    <span class="text-xl" >&rarr;</span>
+                                </button>
+                            </div>
+                            <div class=" flex flex-col p-5 shadow-md rounded-lg bg-white">
+                                <div class="flex flex-1 flex-col border-b border-[gainsboro]">
+                                    <img src="../../images/blog-3.png" alt="blog-1" class="mb-5">
+                                    <p class="font-semibold mb-3">Anonymus feedback tools</p>
+                                    <p class="mb-5">Unity, tolerance key to national security, says Vice President Yemi Osinbajo, yesterday, declared...</p>
+                                </div>
+                                <button class=" font-semibold py-2 mt-3 ml-auto flex items-center space-x-4" >
+                                    <span>Read More</span>
+                                    <span class="text-xl" >&rarr;</span>
+                                </button>
+                            </div>
+                            <div class=" flex flex-col p-5 shadow-md rounded-lg bg-white">
+                                <div class="flex flex-1 flex-col border-b border-[gainsboro]">
+                                    <img src="../../images/blog-4.png" alt="blog-1" class="mb-5">
+                                    <p class="font-semibold mb-3">Reported Child Abuse victim reunited with parents</p>
+                                    <p class="mb-5">Unity, tolerance key to national security, says Vice President Yemi Osinbajo, yesterday, declared...</p>
+                                </div>
+                                <button class=" font-semibold py-2 mt-3 ml-auto flex items-center space-x-4" >
+                                    <span>Read More</span>
+                                    <span class="text-xl" >&rarr;</span>
+                                </button>
+                            </div>
+                            <div class=" flex flex-col p-5 shadow-md rounded-lg bg-white">
+                                <div class="flex flex-1 flex-col border-b border-[gainsboro]">
+                                    <img src="../../images/blog-2.png" alt="blog-1" class="mb-5">
+                                    <p class="font-semibold mb-3">Anonymus feedback tools</p>
+                                    <p class="mb-5">Unity, tolerance key to national security, says Vice President Yemi Osinbajo, yesterday, declared...</p>
+                                </div>
+                                <button class=" font-semibold py-2 mt-3 ml-auto flex items-center space-x-4" >
+                                    <span>Read More</span>
+                                    <span class="text-xl" >&rarr;</span>
+                                </button>
+                            </div>
+                            <div class=" flex flex-col p-5 shadow-md rounded-lg bg-white">
+                                <div class="flex flex-1 flex-col border-b border-[gainsboro]">
+                                    <img src="../../images/blog-3.png" alt="blog-1" class="mb-5">
+                                    <p class="font-semibold mb-3">Anonymus feedback tools</p>
+                                    <p class="mb-5">Unity, tolerance key to national security, says Vice President Yemi Osinbajo, yesterday, declared...</p>
+                                </div>
+                                <button class=" font-semibold py-2 mt-3 ml-auto flex items-center space-x-4" >
+                                    <span>Read More</span>
+                                    <span class="text-xl" >&rarr;</span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="flex w-full justify-center space-x-2 mt-10 items-center mx-auto">
+                            <p class=" p-2 rounded-full cursor-pointer text-primaryRed">1</p>
+                            <p class="p-2 rounded-full cursor-pointer hover:text-primaryRed"> 2</p>
+                            <p  class="p-2 rounded-full cursor-pointer hover:text-primaryRed">3</p>
+                            <p class="scale-y-[1.5] p-2 rounded-full cursor-pointer -mt-1 hover:text-primaryRed">&gt;</p>
+                        </div>
+                    </section>
+                </div>   
+                <div class=" mt-4 lg:mt-16">
+                    <section class="px-[5%] xl:px-0 relative">
+                        <h2 class="text-2xl font-bold mb-5 lg:mb-2">NewsLetter</h2>
+                        <p class="pb-28 md:pb-14 my-2 text-center md:text-left ">The most effective, anonymous reporting system for crime in the nation.</p>
+                        <div class=" w-full sm:w-[unset] flex flex-col md:flex-row gap-2 items-center absolute left-1/2 -translate-x-1/2 -bottom-[30px] z-10 ">
+                            <input  type="email"  class="text-sm p-3 h-12 w-[90%] sm:w-[400px] rounded-md outline-none border border-[gainsboro]" placeholder="Type your email here" >
+                            <button class="px-10 py-2 h-12 rounded-md bg-primaryRed text-white text-sm lg:text-base ">Subscribe</button>
+                        </div>
+                    </section>
+                </div>
             </div>
-            <div class="py-14">
-                <section class="px-[5%] xl:px-0 max-w-[700px]" >
-                    <h2 class="text-2xl font-bold mb-5 lg:mb-2 text-center">You are the protector of your community. <br class="hidden sm:block"> We keep your personal information private.</h2>
-                    <p class="text-center">WeTip is dedicated to offering the nation's most effective anonymous reporting service. When you submit
-                        a report, we promise and ensure complete confidentiality and anonymity. All information is shared with 
-                        your company, as well as local, state, federal, and international law enforcement organizations, in order 
-                        to communicate information about criminal activities in your area.</p>
+            <div class="hide pt-10 pb-14" data-report="true" >
+                <section data-section="1" class="px-[5%] xl:px[0] flex flex-col" >
+                    <h2 class="text-center text-2xl font-bold mb-10 sm:mb-14 ">Report</h2>
+                    <div class="w-full">
+                        <div class="timeline flex items-center mx-auto justify-center">
+                                <div class=" group relative active flex flex-col justify-center">
+                                    <div class="circle text-sm  circle-1  ">1</div>
+                                    <p class=" text-[10px] active  sm:text-xs w-max left-1/2 -translate-x-1/2 -bottom-6 no-wrap absolute" >Career path | Interest</p>
+                                </div>
+                                <div class="indicator indicator-1"></div>
+                                <div class=" group2 relative flex flex-col justify-center">
+                                    <div class="circle text-sm  circle-2">2</div>
+                                    <p class=" text-[10px] sm:text-xs w-max left-1/2 -translate-x-1/2 -bottom-6 no-wrap absolute" >Career path | Interest</p>
+                                </div>
+                                <div class="indicator indicator-2"></div>
+                            <div class="group3 relative flex flex-col justify-center">
+                                <div class="circle text-sm  circle-3">3</div>
+                                <p class=" text-[10px] sm:text-xs w-max left-1/2 -translate-x-1/2 -bottom-6 no-wrap absolute" >Experience | Challenges</p>
+                            </div>
+                        </div>  
+                        <div class="mx-auto mt-16 max-w-[600px] p-[5%] border border-[gainsboro] rounded-md shadow-sm my-6">
+                            <h3 class="font-semibold text-xl mb-6">New Report / Tips</h3>
+                            <section>
+                                <p class="mb-2">Is this crime occuring right now? <span class="text-primaryRed">*</span> </p>
+                                <div class="flex gap-1 ml-5 mb-1 items-center">
+                                    <input type="radio" name="now" id="yes" checked>
+                                    <label class="text-sm" for="yes">Yes</label>
+                                </div>
+                                <div class="flex gap-1 ml-5 items-center">
+                                    <input type="radio" name="now" id="no">
+                                    <label class="text-sm" for="no">No</label>
+                                </div>
+                            </section>
+                            <section class="my-10">
+                                <p class="mb-2">Which state was this crime committed?</p>
+                                <div>
+                                    <select class="border rounded-lg w-full px-2 py-3  " name="state" id="state">
+                                        <option value="boron" selected >Borno</option>
+                                        <option value="lagos" selected >Lagos</option>
+                                        <option value="abuja" selected >Abuja</option>
+                                        <option value="kano" selected >Kano</option>
+                                    </select>
+                                </div>
+                            </section>
+                            <section>
+                                    <p class="mb-2">Is this crime occuring right now? <span class="text-primaryRed">*</span> </p>
+                                    <div class="flex gap-1 ml-5 mb-1 items-center">
+                                        <input type="radio" name="now2" id="yes2" checked>
+                                        <label class="text-sm" for="yes2">Yes</label>
+                                    </div>
+                                    <div class="flex gap-1 ml-5 items-center">
+                                        <input type="radio" name="now2" id="no2">
+                                        <label class="text-sm" for="no2">No</label>
+                                    </div>
+                            </section>
+                            <div class="flex gap-2 sm:gap-4 justify-end mt-10 mb-4">
+                                <button data-prevStep1 class="w-28 justify-center items-center rounded-md border border-primaryRed flex py-2 gap-2" >
+                                    <img src="../../images/prev.svg" class=" w-4 "  alt="prev">
+                                    <span class="text-sm">Prev</span>
+                                </button>
+                                <button data-nextStep1 class="w-28 justify-center items-center rounded-md bg-primaryRed flex py-2 gap-2" >
+                                    <span class="text-sm text-white">Next</span>
+                                    <img src="../../images/next.svg" class="w-4" alt="next">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </section>
-            </div>
-            <div class="bg-faintRed py-10 " >
-                <section class="px-[5%] xl:px-0" >
-                    <h2 class="text-2xl font-bold mb-10">Our Blog Posts</h2>
-                    <div class="grid  md:grid-cols-2 lg:grid-cols-3 gap-10">
-                        <div class="flex flex-col p-5 shadow-md rounded-lg bg-white">
-                            <div class="flex flex-1 flex-col border-b border-[gainsboro]">
-                                <img src="../../images/blog-1.png" alt="blog-1" class="mb-5">
-                                <p class="font-semibold mb-3">Reported Child Abuse victim reunited with parents</p>
-                                <p class="mb-5">Unity, tolerance key to national security, says Vice President Yemi Osinbajo, yesterday, declared...</p>
+                <section data-section="2" class="hide px-[5%] xl:px[0] flex flex-col" >
+                    <h2 class="text-center text-2xl font-bold mb-2 sm:mb-14 ">Report</h2>
+                    <p class="text-center my-10" >Hello dear! kindly fill the form below so as  to give us an insight on <br class="hidden sm:block" > your interest and how we can be of help  </p>
+                    <div class="timeline flex items-center mx-auto justify-center">
+                        <!-- <div class="group1 active"> -->
+                            <div class=" group relative active flex flex-col justify-center">
+                                <div class="circle text-sm  circle-1  ">1</div>
+                                <p class=" text-[10px] active  sm:text-xs w-max left-1/2 -translate-x-1/2 -bottom-6 no-wrap absolute" >Career path | Interest</p>
                             </div>
-                            <button class=" font-semibold py-2 mt-3 ml-auto flex items-center space-x-4" >
-                                <span>Read More</span>
-                                <span class="text-xl" >&rarr;</span>
-                            </button>
+                            <div class="indicator indicator-1 !bg-primaryRed"></div>
+                        <!-- </div> -->
+                        <!-- <div class="group2 " > -->
+                            <div class=" group active relative flex flex-col justify-center">
+                                <div class="circle text-sm  circle-2">2</div>
+                                <p class=" text-[10px] sm:text-xs w-max left-1/2 -translate-x-1/2 -bottom-6 no-wrap absolute" >Career path | Interest</p>
+                            </div>
+                            <div class="indicator indicator-2"></div>
+                        <!-- </div> -->
+                        <div class="group3 relative flex flex-col justify-center">
+                            <div class="circle text-sm  circle-3">3</div>
+                            <p class=" text-[10px] sm:text-xs w-max left-1/2 -translate-x-1/2 -bottom-6 no-wrap absolute" >Experience | Challenges</p>
                         </div>
-                        <div class=" flex flex-col p-5 shadow-md rounded-lg bg-white">
-                            <div class="flex flex-1 flex-col border-b border-[gainsboro]">
-                                <img src="../../images/blog-2.png" alt="blog-1" class="mb-5">
-                                <p class="font-semibold mb-3">Anonymus feedback tools</p>
-                                <p class="mb-5">Unity, tolerance key to national security, says Vice President Yemi Osinbajo, yesterday, declared...</p>
+                    </div>  
+                    <div class="mx-auto mt-16 w-full md:w-[600px] p-[5%] border border-[gainsboro] rounded-md shadow-sm my-6">
+                        <h3 class="font-semibold text-xl mb-6">Regarding</h3>
+                        <p class="mb-2 font-medium !text-base md:!text-lg ">What is this tip regarding?</p>
+                        <div class="ml-5">
+                            <div class="flex gap-2 items-center">
+                                <input type="checkbox" name="regarding" id="school">
+                                <label for="school">School</label>
                             </div>
-                            <button class=" font-semibold py-2 mt-3 ml-auto flex items-center space-x-4" >
-                                <span>Read More</span>
-                                <span class="text-xl" >&rarr;</span>
-                            </button>
+                            <div class="flex gap-2 items-center">
+                                <input type="checkbox" name="regarding" id="terrorism">
+                                <label for="terrorism">Terrorism</label>
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <input type="checkbox" name="regarding" id="coporation">
+                                <label for="coporation">Coporation</label>
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <input type="checkbox" name="regarding" id="welfare_fraud">
+                                <label for="welfare_fraud">Welfare Fraud</label>
+                            </div>
+                            <div class="flex gap-2 items-center">
+                                <input type="checkbox" name="regarding" id="others">
+                                <label for="others">Others</label>
+                            </div>
                         </div>
-                        <div class=" flex flex-col p-5 shadow-md rounded-lg bg-white">
-                            <div class="flex flex-1 flex-col border-b border-[gainsboro]">
-                                <img src="../../images/blog-3.png" alt="blog-1" class="mb-5">
-                                <p class="font-semibold mb-3">Anonymus feedback tools</p>
-                                <p class="mb-5">Unity, tolerance key to national security, says Vice President Yemi Osinbajo, yesterday, declared...</p>
-                            </div>
-                            <button class=" font-semibold py-2 mt-3 ml-auto flex items-center space-x-4" >
-                                <span>Read More</span>
-                                <span class="text-xl" >&rarr;</span>
+                        <div class="flex gap-2 sm:gap-4 justify-end mt-10 mb-4">
+                            <button data-prevStep2 class="w-28 justify-center items-center rounded-md border border-primaryRed flex py-2 gap-2" >
+                                <img src="../../images/prev.svg" class=" w-4 "  alt="prev">
+                                <span class="text-sm">Prev</span>
                             </button>
-                        </div>
-                        <div class=" flex flex-col p-5 shadow-md rounded-lg bg-white">
-                            <div class="flex flex-1 flex-col border-b border-[gainsboro]">
-                                <img src="../../images/blog-4.png" alt="blog-1" class="mb-5">
-                                <p class="font-semibold mb-3">Reported Child Abuse victim reunited with parents</p>
-                                <p class="mb-5">Unity, tolerance key to national security, says Vice President Yemi Osinbajo, yesterday, declared...</p>
-                            </div>
-                            <button class=" font-semibold py-2 mt-3 ml-auto flex items-center space-x-4" >
-                                <span>Read More</span>
-                                <span class="text-xl" >&rarr;</span>
-                            </button>
-                        </div>
-                        <div class=" flex flex-col p-5 shadow-md rounded-lg bg-white">
-                            <div class="flex flex-1 flex-col border-b border-[gainsboro]">
-                                <img src="../../images/blog-2.png" alt="blog-1" class="mb-5">
-                                <p class="font-semibold mb-3">Anonymus feedback tools</p>
-                                <p class="mb-5">Unity, tolerance key to national security, says Vice President Yemi Osinbajo, yesterday, declared...</p>
-                            </div>
-                            <button class=" font-semibold py-2 mt-3 ml-auto flex items-center space-x-4" >
-                                <span>Read More</span>
-                                <span class="text-xl" >&rarr;</span>
-                            </button>
-                        </div>
-                        <div class=" flex flex-col p-5 shadow-md rounded-lg bg-white">
-                            <div class="flex flex-1 flex-col border-b border-[gainsboro]">
-                                <img src="../../images/blog-3.png" alt="blog-1" class="mb-5">
-                                <p class="font-semibold mb-3">Anonymus feedback tools</p>
-                                <p class="mb-5">Unity, tolerance key to national security, says Vice President Yemi Osinbajo, yesterday, declared...</p>
-                            </div>
-                            <button class=" font-semibold py-2 mt-3 ml-auto flex items-center space-x-4" >
-                                <span>Read More</span>
-                                <span class="text-xl" >&rarr;</span>
+                            <button data-nextStep2 class="w-28 justify-center items-center rounded-md bg-primaryRed flex py-2 gap-2" >
+                                <span class="text-sm text-white">Next</span>
+                                <img src="../../images/next.svg" class="w-4" alt="next">
                             </button>
                         </div>
                     </div>
-                    <div class="flex w-full justify-center space-x-2 mt-10 items-center mx-auto">
-                        <p class=" p-2 rounded-full cursor-pointer text-primaryRed">1</p>
-                        <p class="p-2 rounded-full cursor-pointer hover:text-primaryRed"> 2</p>
-                        <p  class="p-2 rounded-full cursor-pointer hover:text-primaryRed">3</p>
-                        <p class="scale-y-[1.5] p-2 rounded-full cursor-pointer -mt-1 hover:text-primaryRed">&gt;</p>
-                    </div>
                 </section>
-            </div>   
-            <div class=" mt-4 lg:mt-16">
-                <section class="px-[5%] xl:px-0 relative">
-                    <h2 class="text-2xl font-bold mb-5 lg:mb-2">NewsLetter</h2>
-                    <p class="pb-28 md:pb-14 my-2 text-center md:text-left ">The most effective, anonymous reporting system for crime in the nation.</p>
-                    <div class=" w-full sm:w-[unset] flex flex-col md:flex-row gap-2 items-center absolute left-1/2 -translate-x-1/2 -bottom-[30px] z-10 ">
-                        <input  type="email"  class="text-sm p-3 h-12 w-[90%] sm:w-[400px] rounded-md outline-none border border-[gainsboro]" placeholder="Type your email here" >
-                        <button class="px-10 py-2 h-12 rounded-md bg-primaryRed text-white text-sm lg:text-base ">Subscribe</button>
+                <section data-section="3" class="hide px-[5%] xl:px[0] flex flex-col">
+                    <h2 class="text-center text-2xl font-bold mb-2 sm:mb-14 ">Report</h2>
+                    <p class="text-center my-10" >Hello dear! kindly fill the form below so as  to give us an insight on <br class="hidden sm:block" > your interest and how we can be of help  </p>
+                    <div class="timeline flex items-center mx-auto justify-center">
+                        <!-- <div class="group1 active"> -->
+                            <div class=" group relative active flex flex-col justify-center">
+                                <div class="circle text-sm  circle-1  ">1</div>
+                                <p class=" text-[10px] active  sm:text-xs w-max left-1/2 -translate-x-1/2 -bottom-6 no-wrap absolute" >Career path | Interest</p>
+                            </div>
+                            <div class="indicator indicator-1 !bg-primaryRed"></div>
+                        <!-- </div> -->
+                        <!-- <div class="group2 " > -->
+                            <div class=" group active relative flex flex-col justify-center">
+                                <div class="circle text-sm  circle-2">2</div>
+                                <p class=" text-[10px] sm:text-xs w-max left-1/2 -translate-x-1/2 -bottom-6 no-wrap absolute" >Career path | Interest</p>
+                            </div>
+                            <div class="indicator indicator-2 !bg-primaryRed"></div>
+                        <!-- </div> -->
+                        <div class="group active relative flex flex-col justify-center">
+                            <div class="circle text-sm  circle-3">3</div>
+                            <p class=" text-[10px] sm:text-xs w-max left-1/2 -translate-x-1/2 -bottom-6 no-wrap absolute" >Experience | Challenges</p>
+                        </div>
+                    </div>
+                    <div class="mx-auto mt-16 w-full md:w-[600px] p-[5%] border border-[gainsboro] rounded-md shadow-sm my-6">
+                        <h3 class="font-semibold text-xl mb-6">Crime Information</h3>
+                        <div>
+                            <p class="mb-2">What is the type of crime? <span class="text-primaryRed">*</span> </p>
+                            <p class="text-sm">Please select all that apply: </p>
+                            <div>
+                                <div class="ml-5">
+                                    <div>
+                                        <div class="flex gap-2 items-center">
+                                            <input type="checkbox" name="regarding" id="drug_related">
+                                            <label for="drug_related">Drug Related</label>
+                                        </div>
+                                        <div class="ml-5">
+                                            <div class="flex gap-2 items-center">
+                                                <input type="checkbox" name="regarding" id="drug_abuse">
+                                                <label for="drug_abuse">Drug Abuse</label>
+                                            </div>
+                                            <div class="flex gap-2 items-center">
+                                                <input type="checkbox" name="regarding" id="drug_sales1">
+                                                <label for="drug_sales1">Drug Salse</label>
+                                            </div>
+                                            <div class="flex gap-2 items-center">
+                                                <input type="checkbox" name="regarding" id="drug_sales2">
+                                                <label for="drug_sales2">Drug Salse</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-2 items-center">
+                                        <input type="checkbox" name="regarding" id="vandalism">
+                                        <label for="vandalism">Vandalism</label>
+                                    </div>
+                                    <div class="flex gap-2 items-center">
+                                        <input type="checkbox" name="regarding" id="graffiti">
+                                        <label for="graffiti">Graffiti</label>
+                                    </div>
+                                    <div class="flex gap-2 items-center">
+                                        <input type="checkbox" name="regarding" id="Theft">
+                                        <label for="Theft">Theft</label>
+                                    </div>
+                                    <div class="flex gap-2 items-center">
+                                        <input type="checkbox" name="regarding" id="self_harm">
+                                        <label for="self_harm">Self Harm</label>
+                                    </div>
+                                    <div class="flex gap-2 items-center">
+                                        <input type="checkbox" name="regarding" id="children">
+                                        <label for="children">Crime against children</label>
+                                    </div>
+                                    <div class="flex gap-2 items-center">
+                                        <input type="checkbox" name="regarding" id="secual_harrasment">
+                                        <label for="secual_harrasment">Sexual Harrassment</label>
+                                    </div>
+                                    <div class="flex gap-2 items-center">
+                                        <input type="checkbox" name="regarding" id="threat">
+                                        <label for="threat">Threat</label>
+                                    </div>
+                                    <div class="flex gap-2 items-center">
+                                        <input type="checkbox" name="regarding" id="arrison">
+                                        <label for="arrison">Arrison</label>
+                                    </div>
+                                    <div class="flex gap-2 items-center">
+                                        <input type="checkbox" name="regarding" id="suspicion">
+                                        <label for="suspicion">Suspicious Activities</label>
+                                    </div>
+                                    <div class="flex gap-2 items-center">
+                                        <input type="checkbox" name="regarding" id="others">
+                                        <label for="others">Others</label>
+                                    </div>
+                                </div>
+                                <div class="mt-5" >
+                                    <p class="text-sm mb-2">Kindly provide brief details of what is happening or have happened  <span class="text-primaryRed ml-1" >*</span> </p>
+                                    <textarea class="w-full !h-52 rounded-md p-3 text-sm outline-none border border-[gainsboro]"  placeholder="Type in detail..." name="detail" id="detail"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-10 sm:gap-4 items-center justify-between mt-10 mb-4">
+                            <div class="flex gap-2 flex-row sm:flex-col">
+                                <input type="file" name="file" id="file" hidden data-selectFile >
+                                <label class="cursor-pointer" for="file">Attach a file</label>
+                                <p class="text-primaryRed" data-selectedFile ></p>
+                            </div>
+                            <div  class="flex gap-2 sm:gap-4">
+                                <button data-prevStep3 class="w-28 justify-center items-center rounded-md border border-primaryRed flex py-2 gap-2" >
+                                    <img src="../../images/prev.svg" class=" w-4 "  alt="prev">
+                                    <span class="text-sm">Prev</span>
+                                </button>
+                                <button  data-submitReport class="w-28 justify-center items-center rounded-md bg-primaryRed flex py-2 gap-2" >
+                                    <span class="text-sm text-white">Submit</span>
+                                    <img src="../../images/next.svg" class="w-4" alt="next">
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>
