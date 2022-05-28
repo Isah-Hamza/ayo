@@ -25,7 +25,7 @@ let pickedFile:File;
 //     console.log(selectedFile)
 // })
 
-selectFile.addEventListener('change',(e: Event) => {
+selectFile?.addEventListener('change',(e: Event) => {
     pickedFile = e.target.files[0];
     selectedFile.innerText = e.target.files[0].name;
 })

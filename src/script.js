@@ -20,7 +20,7 @@ var pickedFile;
 // selectFile?.addEventListener('click', () => {
 //     console.log(selectedFile)
 // })
-selectFile.addEventListener('change', function (e) {
+selectFile === null || selectFile === void 0 ? void 0 : selectFile.addEventListener('change', function (e) {
     pickedFile = e.target.files[0];
     selectedFile.innerText = e.target.files[0].name;
 });
