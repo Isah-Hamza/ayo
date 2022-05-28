@@ -11,12 +11,14 @@ const nextStep1 = document.querySelector('[data-nextStep1]');
 const prevStep2 = document.querySelector('[data-prevStep2]');
 const nextStep2 = document.querySelector('[data-nextStep2]');
 const prevStep3 = document.querySelector('[data-prevStep3]');
-const submitReport = document.querySelector('[data-submitReport]');
+const submitReport = document.querySelector('[data-submitReport]') as HTMLButtonElement ;
 const section1 = document.querySelector('[data-section="1"]');
 const section2 = document.querySelector('[data-section="2"]');
 const section3 = document.querySelector('[data-section="3"]');
 const selectFile  = document.querySelector('[data-selectFile]') as HTMLInputElement ;
 const selectedFile = document.querySelector('[data-selectedFile]') as HTMLParagraphElement ;
+const submitReportOverlay = document.querySelector('[data-overlay]') as HTMLDivElement ;
+const closeReportOverlay = document.querySelector('[data-closeOverlay]');
 
 
 let pickedFile:File;
@@ -24,6 +26,16 @@ let pickedFile:File;
 // selectFile?.addEventListener('click', () => {
 //     console.log(selectedFile)
 // })
+
+
+
+closeReportOverlay?.addEventListener('click', () => {
+    submitReportOverlay.classList.toggle('hide');
+})
+
+submitReport?.addEventListener('click', () => {
+    submitReportOverlay.classList.toggle('hide');
+})
 
 selectFile?.addEventListener('change',(e: Event) => {
     pickedFile = e.target.files[0];

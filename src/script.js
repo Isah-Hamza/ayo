@@ -16,10 +16,18 @@ var section2 = document.querySelector('[data-section="2"]');
 var section3 = document.querySelector('[data-section="3"]');
 var selectFile = document.querySelector('[data-selectFile]');
 var selectedFile = document.querySelector('[data-selectedFile]');
+var submitReportOverlay = document.querySelector('[data-overlay]');
+var closeReportOverlay = document.querySelector('[data-closeOverlay]');
 var pickedFile;
 // selectFile?.addEventListener('click', () => {
 //     console.log(selectedFile)
 // })
+closeReportOverlay === null || closeReportOverlay === void 0 ? void 0 : closeReportOverlay.addEventListener('click', function () {
+    submitReportOverlay.classList.toggle('hide');
+});
+submitReport === null || submitReport === void 0 ? void 0 : submitReport.addEventListener('click', function () {
+    submitReportOverlay.classList.toggle('hide');
+});
 selectFile === null || selectFile === void 0 ? void 0 : selectFile.addEventListener('change', function (e) {
     pickedFile = e.target.files[0];
     selectedFile.innerText = e.target.files[0].name;
