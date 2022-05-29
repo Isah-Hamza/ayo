@@ -10,7 +10,7 @@
     />
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="../../dist/output.css">
-    <title>AYO | REPORT</title>
+    <title>AYO | BLOG</title>
 </head>
 <body>
     <div class="wrapper w-full">
@@ -27,9 +27,9 @@
                     <li><a href="/">Home</a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="./report.html">Report</a></li>
-                    <li><a href="./blog.html">Blog</a></li>
-                    <li class="active"><a href="#">FAQs</a></li>
-                    <li><a href="./login.html">Login</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="./faq.html">FAQs</a></li>
+                    <li class="active"><a href="./login.html">Login</a></li>
                     <li ><button class=" cursor-pointer border border-primaryRed rounded-md px-6 py-2"><a href="./register.html">Register</a> </button></li>
                     <li class="cursor-pointer hidden lg:block ">
                         <div class="linear rounded-full w-8 p-2">
@@ -51,85 +51,94 @@
             
         </header>
         <main class="flex flex-col mt-[70px] " >
-            <div class="" data-report="false">
+            <div class="">
                 <div class=" bg-customBlack w-full h-[calc(100vh-70px)] lg:h-[450px] relative flex justify-around items-center ">
                     <section class="!w-full gap-16 lg:gap-0 pb-10 lg:pb-[unset] lg:pl-[5%] xl:pl-0 flex  lg:grid grid-cols-[1fr,1fr] flex-col-reverse lg:flex-row items-center lg:items-start text-center lg:text-left justify-between text-white  " >
-                        <div class="lg:mt-10">
-                            <h2 class="text-3xl lg:text-4xl leading-snug font-semibold">Confused and need <br> help?  we are here <br> for you.</h2>
+                        <div class="lg:mt-10 px-5">
+                            <h2 class="text-2xl lg:text-4xl leading-snug font-semibold">Read our blog post to get <br class="hidden sm:block" /> latest about security & <br class="hidden sm:block" /> investigation.</h2>
                             <!-- <button class="mt-14 text-white bg-primaryRed px-14 py-3 pb-4 rounded-md" ><span> Report Now </span><span class="text-xl ml-1 ">&rarr;</span> </button> -->
                         </div>
                         <div class="-mt-4 lg:mt-[unset] ml-5 lg:ml-0 relative lg:absolute w-[170%] sm:w-[500px] h-[300px] right-0 bottom-0 scale-[55%] sm:scale-[80%] md:scale-[unset] ">
                             <img src="../../images/blue-rectangle.png" alt="blue-rectangle" class="absolute bottom-[0] -left-5 h-[320px] w-[520px]">
                             <img src="../../images/red-rectangle.png" alt="" class="absolute w-56 -left-10 -top-12 " >
-                            <img src="../../images/about-faq.png" alt="about-faq" class="w-full sm:w-[500px] absolute " >
+                            <img src="../../images/blog.png" alt="about-faq" class="w-full sm:w-[500px] absolute " >
                         </div>
                     </section>
                 </div>
-                <div class="py-14">
-                    <section class="faq px-[5%] xl:px-0 grid md:grid-cols-2 gap-[10%] " >
-                        <div>
-                            <img src="../../images/faq_image.svg" alt="">
+                <section >
+                    <div data-selected="false" class="w-full overflow-hidden">
+                        <div class="px-10 pb-4 secondContainer overflow-x-auto flex grid-cols-3 gap-5 mt-10 ">
+                            <div data-item class="relative scale-y-75 cursor-pointer transition-all duration-150 rounded-xl  min-w-[300px] md:min-w-[350px] overflow-hidden">
+                                        <img src="../../images/blog1.png" alt="blog-1" class="w-full h-80 " >
+                                        <div class=" bg-black text-white p-7 bg-opacity-70 text-sm absolute bottom-0 left-0 right-0 w-full" >
+                                        <p class="text-[13px] font-semibold">08.08.2021</p>
+                                        <p class="py-3 text-sm font-semibold">Richird Norton photorealistic rendering as real photos</p>
+                                        <p class ="opacity-90 text-xs ">Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data.</p>
+                                        </div>
+                            </div>
+                            <div data-item class="relative scale-y-75 cursor-pointer transition-all duration-150 rounded-xl  min-w-[300px] md:min-w-[350px] overflow-hidden">
+                                        <img src="../../images/blog2.png" alt="blog-1" class="w-full h-80 " >
+                                        <div class=" bg-black text-white p-7 bg-opacity-70 text-sm absolute bottom-0 left-0 right-0 w-full" >
+                                        <p class="text-[13px] font-semibold">08.08.2021</p>
+                                        <p class="py-3 text-sm font-semibold">Richird Norton photorealistic rendering as real photos</p>
+                                        <p class ="opacity-90 text-xs ">Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data.</p>
+                                        </div>
+                            </div>
+                            <div data-item class="relative scale-y-75 cursor-pointer transition-all duration-150 rounded-xl  min-w-[300px] md:min-w-[350px] overflow-hidden">
+                                        <img src="../../images/blog3.png" alt="blog-1" class="w-full h-80 " >
+                                        <div class=" bg-black text-white p-7 bg-opacity-70 text-sm absolute bottom-0 left-0 right-0 w-full" >
+                                        <p class="text-[13px] font-semibold">08.08.2021</p>
+                                        <p class="py-3 text-sm font-semibold">Richird Norton photorealistic rendering as real photos</p>
+                                        <p class ="opacity-90 text-xs ">Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data.</p>
+                                        </div>
+                            </div>
+                            <div data-item class="relative scale-y-75 cursor-pointer transition-all duration-150 rounded-xl  min-w-[300px] md:min-w-[350px] overflow-hidden">
+                                        <img src="../../images/blog1.png" alt="blog-1" class="w-full h-80 " >
+                                        <div class=" bg-black text-white p-7 bg-opacity-70 text-sm absolute bottom-0 left-0 right-0 w-full" >
+                                        <p class="text-[13px] font-semibold">08.08.2021</p>
+                                        <p class="py-3 text-sm font-semibold">Richird Norton photorealistic rendering as real photos</p>
+                                        <p class ="opacity-90 text-xs ">Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data.</p>
+                                        </div>
+                            </div>
+                            <div data-item class="relative scale-y-75 cursor-pointer transition-all duration-150 rounded-xl  min-w-[300px] md:min-w-[350px] overflow-hidden">
+                                        <img src="../../images/blog2.png" alt="blog-1" class="w-full h-80 " >
+                                        <div class=" bg-black text-white p-7 bg-opacity-70 text-sm absolute bottom-0 left-0 right-0 w-full" >
+                                        <p class="text-[13px] font-semibold">08.08.2021</p>
+                                        <p class="py-3 text-sm font-semibold">Richird Norton photorealistic rendering as real photos</p>
+                                        <p class ="opacity-90 text-xs ">Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data.</p>
+                                        </div>
+                            </div>
+                            <div data-item class="relative scale-y-75 cursor-pointer transition-all duration-150 rounded-xl  min-w-[300px] md:min-w-[350px] overflow-hidden">
+                                        <img src="../../images/blog3.png" alt="blog-1" class="w-full h-80 " >
+                                        <div class=" bg-black text-white p-7 bg-opacity-70 text-sm absolute bottom-0 left-0 right-0 w-full" >
+                                        <p class="text-[13px] font-semibold">08.08.2021</p>
+                                        <p class="py-3 text-sm font-semibold">Richird Norton photorealistic rendering as real photos</p>
+                                        <p class ="opacity-90 text-xs ">Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data.</p>
+                                        </div>
+                            </div>
+                         </div>
+                    </div>
+                    <section data-selected="true" class="hide py-10 px-[5%] gap-[5%] xl:px-0 grid md:grid-cols-[1fr,2fr]" >
+                        <div class="flex justify-center"><img data-dynamicImg  class="rounded-xl" src="../../images/blog1.png" alt=""></div>
+                        <div class="max-w-[500px] text-sm mx-auto md:mx-[unset] md:mt-10">
+                            <h2 class="text-xl font-semibold mb-3 " >Richard Norton photorealistic rendering as real photos</h2>
+                            <p class = "text-xs">Seamlessly syndicate cutting-edge architectures rather than collaborative collaboration 
+                                and idea-sharing. Proactively incubate visionary interfaces whereas premium benefits. Seamlessly negotiate ubiquitous
+                                adership skills rather than parallel ideas. Dramatically visualize superior interfaces for best-of-breed alignments.
+                                Synergistically formulate performance based users through customized relationships. Interactively deliver 
+                                cross-platform ROI via granular systems. Intrinsicly enhance effective initiatives vis-a-vis orthogonal outsourcing. 
+                                Rapidiously monetize market-driven opportunities with multifunctional users. Collaboratively enhance visionary 
+                                opportunities through revolutionary schemas. Progressively network just in time customer service without real-time 
+                                scenarios.
+                            </p>
+                            <p class="text-sm py-5 font-semibold">08.08.2021</p>
+                            <div class="flex justify-between">
+                                <button class="border px-7 py-[10px] outline-none border-[gainsboro] rounded-md">Verified</button>
+                                <button data-goBackUnselected class="flex rounded-md text-white items-center justify-center px-7 py-[10px] bg-primaryRed"> <span class="mr-2" >&larr;</span> Go Back</button>
+                            </div>
                         </div>
-                        <div class="mx-auto md:mt-8 lg:14 max-w-[500px]">
-                            <h2 class="text-xl font-bold mb-8 md:mb-10">Frequently Asked Questions</h2>
-                            <div class="mb-2 flex flex-col border-b border-b-[gainsboro] ">
-                                <div data-questionHeader class="flex justify-between items-center mb-1 cursor-pointer">
-                                    <h3 class="text-base mr-2 font-semibold">How do anonymous tips works?</h3>
-                                    <div>
-                                        <span class="font-semibold text-lg" data-plus>+</span>
-                                        <span class="hide font-semibold text-lg" data-times >&times;</span>
-                                    </div>
-                                </div>
-                                <p data-questionBody class="question-body mb-3 text-sm opacity-80" >Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla.
-                                     Orci, dictumst nec aliquet id ullamcorper venenatis. </p>
-                            </div>
-                            <div class="mb-2 flex flex-col  border-b border-b-[gainsboro] ">
-                                <div data-questionHeader class="flex justify-between items-center mb-1 cursor-pointer">
-                                    <h3 class="text-base mr-2 font-semibold">How to remain anonymous when reporting a crime?</h3>
-                                    <div>
-                                        <span class="font-semibold text-lg" data-plus>+</span>
-                                        <span class="hide font-semibold text-lg" data-times >&times;</span>
-                                    </div>
-                                </div>
-                                <p data-questionBody class="question-body mb-3 text-sm opacity-80" >Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla.
-                                     Orci, dictumst nec aliquet id ullamcorper venenatis. </p>
-                            </div>
-                            <div class="mb-2 flex flex-col  border-b border-b-[gainsboro] ">
-                                <div data-questionHeader class="flex justify-between items-center mb-1 cursor-pointer">
-                                    <h3 class="text-base mr-2 font-semibold">What happens if you submit a crime tip?</h3>
-                                    <div>
-                                        <span class="font-semibold text-lg" data-plus>+</span>
-                                        <span class="hide font-semibold text-lg" data-times >&times;</span>
-                                    </div>
-                                </div>
-                                <p data-questionBody class="question-body mb-3 text-sm opacity-80" >Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla.
-                                     Orci, dictumst nec aliquet id ullamcorper venenatis. </p>
-                            </div>
-                            <div class="mb-2 flex flex-col  border-b border-b-[gainsboro] ">
-                                <div data-questionHeader class="flex justify-between items-center mb-1 cursor-pointer">
-                                    <h3 class="text-base mr-2 font-semibold">Can I file a police report for verbal threats?</h3>
-                                    <div>
-                                        <span class="font-semibold text-lg" data-plus>+</span>
-                                        <span class="hide font-semibold text-lg" data-times >&times;</span>
-                                    </div>
-                                </div>
-                                <p data-questionBody class="question-body mb-3 text-sm opacity-80" >Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla.
-                                     Orci, dictumst nec aliquet id ullamcorper venenatis. </p>
-                            </div>
-                            <div class="mb-2 flex flex-col  border-b border-b-[gainsboro] ">
-                                <div data-questionHeader class="flex justify-between items-center mb-1 cursor-pointer">
-                                    <h3 class="text-base mr-2 font-semibold">Tortor nisl pellentesque sit quis orci dolor?</h3>
-                                    <div>
-                                        <span class="font-semibold text-lg" data-plus>+</span>
-                                        <span class="hide font-semibold text-lg" data-times >&times;</span>
-                                    </div>
-                                </div>
-                                <p data-questionBody class="question-body mb-3 text-sm opacity-80" >Nibh quisque suscipit fermentum netus nulla cras porttitor euismod nulla.
-                                     Orci, dictumst nec aliquet id ullamcorper venenatis. </p>
-                            </div>
-                        </div>
-                    </section>
-                </div>
+                    </section >
+                </section>
                 <div class="bg-faintRed py-10 " >
                     <section class="px-[5%] xl:px-0" >
                         <h2 class="text-2xl font-bold mb-10">Our Blog Posts</h2>
@@ -209,7 +218,7 @@
                         </div>
                     </section>
                 </div>   
-                <div class=" mt-4 lg:mt-16">
+                <div class="mt-4 lg:mt-16">
                     <section class="px-[5%] xl:px-0 relative">
                         <h2 class="text-2xl font-bold mb-5 lg:mb-2">NewsLetter</h2>
                         <p class="pb-28 md:pb-14 my-2 text-center md:text-left ">The most effective, anonymous reporting system for crime in the nation.</p>

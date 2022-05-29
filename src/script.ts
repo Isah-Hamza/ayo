@@ -21,34 +21,70 @@ const submitReportOverlay = document.querySelector('[data-overlay]') as HTMLDivE
 const closeReportOverlay = document.querySelector('[data-closeOverlay]');
 const questionHeaders = document.querySelectorAll('[data-questionHeader]');
 const questionBodys = document.querySelectorAll('[data-questionBody]');
+const items = document.querySelectorAll('[data-item]');
+
+const unselectedDiv = document.querySelector('[data-selected="false"]');
+const selectedDiv = document.querySelector('[data-selected="true"]');
+const goBackUnselectedBtn = document.querySelector('[data-goBackUnselected]');
 
 let pickedFile:File;
 
+console.log()
 
-// start faq    
-// questionHeader?.addEventListener('click', () => {
-//     questionBody.classList.toggle('open');
-//     if(questionBody.classList.contains('open'))
-//         questionBody.setAttribute('style', `height:${questionBody.scrollHeight}px`)
-//     else
-//         questionBody.setAttribute('style', `height:0px`)
-//     const plusIcon = questionHeader.querySelector('[data-plus]');
-//     const timesIcon = questionHeader.querySelector('[data-times]');
-//     plusIcon.classList.toggle('hide');
-//     timesIcon.classList.toggle('hide');
-// })
+// start faq  
 
+goBackUnselectedBtn?.addEventListener('click', () => {
+    selectedDiv.classList.add('hide');
+    unselectedDiv.classList.remove('hide');
+})
+
+let observer:IntersectionObserver;
+let options = {
+    root: document.querySelector('.secondContainer'),
+    rootMargin: '50px',
+    threshold: .5,
+}
+
+observer = new IntersectionObserver(callback, options);
+items.forEach(item => {
+    observer.observe(item)
+})
+
+function callback(items){
+    items.forEach(item => {
+        const insIntersecting = item.isIntersecting;
+        const targetElem = item.target;
+        insIntersecting ? targetElem.classList.add('scale') : targetElem.classList.remove('scale') ;
+    });
+}
+
+items?.forEach(item => item.addEventListener('click', () => {
+    const imgSrc = item.children[0].getAttribute('src');
+    unselectedDiv.classList.add('hide');
+    selectedDiv.classList.remove('hide');
+    selectedDiv.querySelector('[data-dynamicImg]').setAttribute('src',imgSrc);
+}))
 
 questionHeaders?.forEach(header => {
     header.addEventListener('click', () => {
-        const qstnBody = header.parentElement.children[1];
+        questionBodys.forEach(elem => {
+            elem.classList.remove('open')
+            elem.setAttribute('style', `height:0px`)
+            questionHeaders.forEach(head => {
+                const plusIcon = head.querySelector('[data-plus]')
+                const timesIcon = head.querySelector('[data-times]')
+                plusIcon.classList.remove('hide');
+                timesIcon.classList.add('hide');
+            })
+        });
+        const qstnBody = header.parentElement.children[1]
         qstnBody.classList.toggle('open')
         if(qstnBody.classList.contains('open'))
             qstnBody.setAttribute('style', `height:${qstnBody.scrollHeight}px`)
         else
             qstnBody.setAttribute('style', `height:0px`)
-        const plusIcon = header.querySelector('[data-plus]');
-        const timesIcon = header.querySelector('[data-times]');
+        const plusIcon = header.querySelector('[data-plus]')
+        const timesIcon = header.querySelector('[data-times]')
         plusIcon.classList.toggle('hide');
         timesIcon.classList.toggle('hide');
     })
@@ -112,7 +148,5 @@ menu?.addEventListener('click', () => {
 closeBtn?.addEventListener('click', () => {
     nav.classList.remove('open');
 })
-
-
 
 console.log('end of script');

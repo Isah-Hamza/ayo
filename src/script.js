@@ -20,21 +20,52 @@ var submitReportOverlay = document.querySelector('[data-overlay]');
 var closeReportOverlay = document.querySelector('[data-closeOverlay]');
 var questionHeaders = document.querySelectorAll('[data-questionHeader]');
 var questionBodys = document.querySelectorAll('[data-questionBody]');
+var items = document.querySelectorAll('[data-item]');
+var unselectedDiv = document.querySelector('[data-selected="false"]');
+var selectedDiv = document.querySelector('[data-selected="true"]');
+var goBackUnselectedBtn = document.querySelector('[data-goBackUnselected]');
 var pickedFile;
-// start faq    
-// questionHeader?.addEventListener('click', () => {
-//     questionBody.classList.toggle('open');
-//     if(questionBody.classList.contains('open'))
-//         questionBody.setAttribute('style', `height:${questionBody.scrollHeight}px`)
-//     else
-//         questionBody.setAttribute('style', `height:0px`)
-//     const plusIcon = questionHeader.querySelector('[data-plus]');
-//     const timesIcon = questionHeader.querySelector('[data-times]');
-//     plusIcon.classList.toggle('hide');
-//     timesIcon.classList.toggle('hide');
-// })
+console.log();
+// start faq  
+goBackUnselectedBtn === null || goBackUnselectedBtn === void 0 ? void 0 : goBackUnselectedBtn.addEventListener('click', function () {
+    selectedDiv.classList.add('hide');
+    unselectedDiv.classList.remove('hide');
+});
+var observer;
+var options = {
+    root: document.querySelector('.secondContainer'),
+    rootMargin: '50px',
+    threshold: .5
+};
+observer = new IntersectionObserver(callback, options);
+items.forEach(function (item) {
+    observer.observe(item);
+});
+function callback(items) {
+    items.forEach(function (item) {
+        var insIntersecting = item.isIntersecting;
+        var targetElem = item.target;
+        insIntersecting ? targetElem.classList.add('scale') : targetElem.classList.remove('scale');
+    });
+}
+items === null || items === void 0 ? void 0 : items.forEach(function (item) { return item.addEventListener('click', function () {
+    var imgSrc = item.children[0].getAttribute('src');
+    unselectedDiv.classList.add('hide');
+    selectedDiv.classList.remove('hide');
+    selectedDiv.querySelector('[data-dynamicImg]').setAttribute('src', imgSrc);
+}); });
 questionHeaders === null || questionHeaders === void 0 ? void 0 : questionHeaders.forEach(function (header) {
     header.addEventListener('click', function () {
+        questionBodys.forEach(function (elem) {
+            elem.classList.remove('open');
+            elem.setAttribute('style', "height:0px");
+            questionHeaders.forEach(function (head) {
+                var plusIcon = head.querySelector('[data-plus]');
+                var timesIcon = head.querySelector('[data-times]');
+                plusIcon.classList.remove('hide');
+                timesIcon.classList.add('hide');
+            });
+        });
         var qstnBody = header.parentElement.children[1];
         qstnBody.classList.toggle('open');
         if (qstnBody.classList.contains('open'))

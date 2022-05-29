@@ -27,10 +27,10 @@
                     <li><a href="/">Home</a></li>
                     <li><a href="#">Services</a></li>
                     <li class="active"><a href="#">Report</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="./blog.html">Blog</a></li>
                     <li><a href="./faq.html">FAQs</a></li>
                     <li><a href="./login.html">Login</a></li>
-                    <li ><button class=" cursor-pointer border border-primaryRed rounded-md px-6 py-2">Register</button></li>
+                    <li ><button class=" cursor-pointer border border-primaryRed rounded-md px-6 py-2"> <a href="./register.html">Register</a> </button></li>
                     <li class="cursor-pointer hidden lg:block ">
                         <div class="linear rounded-full w-8 p-2">
                             <img src="../../images/avatar.svg" alt="avatar">
@@ -53,7 +53,7 @@
         <main class="flex flex-col mt-[70px] " >
             <div data-overlay class=" hide fixed z-[1000] flex items-center justify-center  bg-primaryRed bg-opacity-70 left-0 top-0 right-0 !w-screen h-screen">
                 <div class="w-[90%] md:max-w-[700px] px-8 sm:px-14 pt-16 py-8 bg-white rounded-md relative" >
-                    <img src="../../images/icon-close.svg" alt="close " class="absolute cursor-pointer right-8 top-7 " data-closeOverlay>
+                    <img src="../../images/icon-close.svg" alt="close " class="absolute cursor-pointer right-6 top-5 sm:right-8 sm:top-7 " data-closeOverlay>
                     <h2 class="text-2xl font-semibold mb-3 text-center">Privacy Prompt</h2>
                     <p class="mb-8 text-center">Would you like your identity be shared with others? </p>
                     <div class="sm:bg-black w-56 sm:w-80 mx-auto text-sm grid sm:grid-cols-2 gap-3 sm:gap-1 text-white rounded-xl sm:overflow-hidden ">
@@ -403,7 +403,7 @@
                                 <label class="cursor-pointer" for="file">Attach a file</label>
                                 <p class="text-primaryRed" data-selectedFile ></p>
                             </div>
-                            <div  class="flex gap-2 sm:gap-4">
+                            <div  class="flex gap-8  sm:gap-4">
                                 <button data-prevStep3 class="w-28 justify-center items-center rounded-md border border-primaryRed flex py-2 gap-2" >
                                     <img src="../../images/prev.svg" class=" w-4 "  alt="prev">
                                     <span class="text-sm">Prev</span>
