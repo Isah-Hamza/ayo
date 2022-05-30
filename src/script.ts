@@ -65,12 +65,14 @@ items?.forEach(item => item.addEventListener('click', () => {
     selectedDiv.querySelector('[data-dynamicImg]').setAttribute('src',imgSrc);
 }))
 
-questionHeaders?.forEach(header => {
+questionHeaders?.forEach((header, index) => {
     header.addEventListener('click', () => {
-        questionBodys.forEach(elem => {
+        questionBodys.forEach((elem, idx) => {
+            if(index == idx) return;
             elem.classList.remove('open')
             elem.setAttribute('style', `height:0px`)
-            questionHeaders.forEach(head => {
+            questionHeaders.forEach((head,idx) => {
+                if (index == idx) return; 
                 const plusIcon = head.querySelector('[data-plus]')
                 const timesIcon = head.querySelector('[data-times]')
                 plusIcon.classList.remove('hide');
@@ -100,7 +102,7 @@ submitReport?.addEventListener('click', () => {
     submitReportOverlay.classList.toggle('hide');
 })
 
-selectFile?.addEventListener('change',(e: Event) => {
+selectFile?.addEventListener('change',(e) => {
     pickedFile = e.target.files[0];
     selectedFile.innerText = e.target.files[0].name;
 })

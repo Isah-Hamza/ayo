@@ -646,16 +646,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-bottom: 1.5rem;
 }
 
-.mx-\[\] {
-  margin-left: ;
-  margin-right: ;
-}
-
-.mx-\[unset\] {
-  margin-left: unset;
-  margin-right: unset;
-}
-
 .mt-5 {
   margin-top: 1.25rem;
 }
@@ -740,12 +730,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1rem;
 }
 
-.mb-8 {
-  margin-bottom: 2rem;
-}
-
 .mr-2 {
   margin-right: 0.5rem;
+}
+
+.mb-8 {
+  margin-bottom: 2rem;
 }
 
 .-mt-40 {
@@ -852,6 +842,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 13rem !important;
 }
 
+.h-60 {
+  height: 15rem;
+}
+
 .min-h-\[700px\] {
   min-height: 700px;
 }
@@ -928,16 +922,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 7rem;
 }
 
+.w-60 {
+  width: 15rem;
+}
+
 .min-w-\[300px\] {
   min-width: 300px;
-}
-
-.min-w-\[30px\] {
-  min-width: 30px;
-}
-
-.min-w-\[350px\] {
-  min-width: 350px;
 }
 
 .max-w-\[500px\] {
@@ -954,14 +944,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .max-w-\[600px\] {
   max-width: 600px;
-}
-
-.max-w-\[\] {
-  max-width: ;
-}
-
-.max-w-\[400px\] {
-  max-width: 400px;
 }
 
 .flex-1 {
@@ -1024,26 +1006,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .grid-cols-3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.grid-cols-2 {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-
-.grid-cols-\[\] {
-  grid-template-columns: ;
-}
-
-.grid-cols-\[2fr\] {
-  grid-template-columns: 2fr;
-}
-
-.grid-cols-\[2fr\2c 1fr\] {
-  grid-template-columns: 2fr 1fr;
-}
-
-.grid-cols-\[1fr\2c 2fr\] {
-  grid-template-columns: 1fr 2fr;
 }
 
 .flex-row {
@@ -1110,6 +1072,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 1.25rem;
 }
 
+.gap-\[5\%\] {
+  gap: 5%;
+}
+
 .gap-\[10\%\] {
   gap: 10%;
 }
@@ -1124,14 +1090,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .gap-8 {
   gap: 2rem;
-}
-
-.gap-\[\] {
-  gap: ;
-}
-
-.gap-\[5\%\] {
-  gap: 5%;
 }
 
 .space-x-8 > :not([hidden]) ~ :not([hidden]) {
@@ -1196,10 +1154,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 0.125rem;
 }
 
-.rounded {
-  border-radius: 0.25rem;
-}
-
 .border {
   border-width: 1px;
 }
@@ -1260,6 +1214,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .bg-opacity-70 {
   --tw-bg-opacity: 0.7;
+}
+
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .p-2 {
@@ -1327,6 +1286,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 1.25rem;
 }
 
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
+.px-7 {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+
+.py-\[10px\] {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .py-14 {
   padding-top: 3.5rem;
   padding-bottom: 3.5rem;
@@ -1342,34 +1316,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 2rem;
 }
 
-.py-\[10px\] {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-}
-
-.px-\[\] {
-  padding-left: ;
-  padding-right: ;
-}
-
-.py-5 {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
-.py-\[\] {
-  padding-top: ;
-  padding-bottom: ;
-}
-
-.px-7 {
-  padding-left: 1.75rem;
-  padding-right: 1.75rem;
 }
 
 .pb-4 {
@@ -2027,16 +1976,16 @@ footer .socials img {
     margin-left: 2.5rem;
   }
 
+  .md\:mt-10 {
+    margin-top: 2.5rem;
+  }
+
   .md\:mt-8 {
     margin-top: 2rem;
   }
 
   .md\:mb-10 {
     margin-bottom: 2.5rem;
-  }
-
-  .md\:mt-10 {
-    margin-top: 2.5rem;
   }
 
   .md\:block {
@@ -2051,8 +2000,16 @@ footer .socials img {
     height: 350px;
   }
 
+  .md\:h-auto {
+    height: auto;
+  }
+
   .md\:w-\[600px\] {
     width: 600px;
+  }
+
+  .md\:w-auto {
+    width: auto;
   }
 
   .md\:min-w-\[350px\] {
@@ -2206,11 +2163,6 @@ footer .socials img {
   .lg\:px-7 {
     padding-left: 1.75rem;
     padding-right: 1.75rem;
-  }
-
-  .lg\:px-0 {
-    padding-left: 0px;
-    padding-right: 0px;
   }
 
   .lg\:pl-\[5\%\] {

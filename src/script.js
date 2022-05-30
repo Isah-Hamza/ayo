@@ -54,12 +54,16 @@ items === null || items === void 0 ? void 0 : items.forEach(function (item) { re
     selectedDiv.classList.remove('hide');
     selectedDiv.querySelector('[data-dynamicImg]').setAttribute('src', imgSrc);
 }); });
-questionHeaders === null || questionHeaders === void 0 ? void 0 : questionHeaders.forEach(function (header) {
+questionHeaders === null || questionHeaders === void 0 ? void 0 : questionHeaders.forEach(function (header, index) {
     header.addEventListener('click', function () {
-        questionBodys.forEach(function (elem) {
+        questionBodys.forEach(function (elem, idx) {
+            if (index == idx)
+                return;
             elem.classList.remove('open');
             elem.setAttribute('style', "height:0px");
-            questionHeaders.forEach(function (head) {
+            questionHeaders.forEach(function (head, idx) {
+                if (index == idx)
+                    return;
                 var plusIcon = head.querySelector('[data-plus]');
                 var timesIcon = head.querySelector('[data-times]');
                 plusIcon.classList.remove('hide');
