@@ -43,6 +43,7 @@ const profileSection = document.querySelector('[data-profileSection]');
 const userDashboardMenu = document.querySelector('[data-userDashboardMenu]');
 const userDashboardClose = document.querySelector('[data-userDashboardClose]');
 const userDashboardAside = document.querySelector('[data-userDashboardAside]');
+const userDashboardOverlay = document.querySelector('.overlay');
 
 
 
@@ -52,12 +53,14 @@ userDashboardMenu?.addEventListener('click', () => {
     userDashboardAside.classList.toggle('animateFromLeft');
     userDashboardClose.classList.toggle('hide');
     userDashboardMenu.classList.toggle('hide');
+    userDashboardOverlay.classList.toggle('openOverlay')
 })
 
 userDashboardClose?.addEventListener('click', () => {
     userDashboardAside.classList.toggle('animateFromLeft');
     userDashboardClose.classList.toggle('hide');
     userDashboardMenu.classList.toggle('hide');
+    userDashboardOverlay.classList.toggle('openOverlay')
 })
 
 if(dashboardUL){
@@ -68,7 +71,13 @@ if(dashboardUL){
                 element1.classList.add('activeTab');
                 element2.classList.remove('activeTab');
                 Array.from(dashboardItems.children).forEach(item =>{
-                    console.log(item)
+                    const ulClass = element1.getAttribute('id');
+                    if(ulClass == null || ulClass == undefined || ulClass == "") return;
+                    if(item.classList.contains(ulClass)){
+                        item.classList.remove('hide');
+                    }else{
+                        item.classList.add('hide');
+                    }
                 })
             });
             userDashboardClose.click();

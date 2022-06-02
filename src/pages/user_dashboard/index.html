@@ -40,28 +40,24 @@
             <div data-userDashboardMenu class="btn block lg:hidden cursor-pointer">
                 <img src="../../../images/icon-menu.svg" alt="icon-menu" class="brightness-150 invert w-4 h-4 scale-x-150">
             </div>
-            <div class="hide " data-userDashboardClose>
+            <div class="hide lg:hidden " data-userDashboardClose>
                 <img  src="../../../images/icon-close.svg" alt="icon-close" class="block lg:hidden w-5">
             </div>
         </header>
         <main class = 'flex min-h-screen pt-[70px]'>
-            <div class="overlay"></div>
+            <div class="overlay "></div>
             <aside data-userDashboardAside class="fixed h-[calc(100vh-70px)] -left-[250px] z-10 lg:h-auto lg:static border-r transition-all duration-500 ease-in-out bg-white border-[gainsboro] w-[250px] lg:w-1/5 px-2" >
                 <div class="mt-10">
                     <ul data-dashboardUL class = 'flex flex-col  '>               
-                        <li data-dashboardLink class="activeTab cursor-pointer py-2 mb-1 !pl-8 flex items-center gap-2" > <img class="w-5" src="../../../images/dashboard.svg" alt="dashboard"><span>Dashboard</span> </li>
-                        <li data-profileLink class="flex items-center cursor-pointer py-2 mb-1 !pl-8 gap-3" > <img class = 'w-4' src="../../../images/user.svg" /> <span>Profile</span>  </li>
+                        <li id='dashboard' data-dashboardLink class="activeTab cursor-pointer py-2 mb-1 !pl-8 flex items-center gap-2" > <img class="w-5" src="../../../images/dashboard.svg" alt="dashboard"><span>Dashboard</span> </li>
+                        <li id="profile" data-profileLink class="flex items-center cursor-pointer py-2 mb-1 !pl-8 gap-3" > <img class = 'w-4' src="../../../images/user.svg" /> <span>Profile</span>  </li>
                         <li class="flex items-center cursor-pointer py-2 mb-1 !pl-8 gap-2" > <img class="w-[22px]" src="../../../images/settings.svg" alt="settings"> <span>Settings</span> </li>
                         <li class="flex mt-10 items-center cursor-pointer py-2 mb-1 !pl-8 gap-[10px]" > <img class="brightness-0 w-5" src="../../../images/Logout.svg" alt="logout"> <span>Logout</span> </li>
                     </ul>
                 </div>
             </aside>
             <div data-dashboardItems class="bg-faintRed w-full py-10 md:py-20 px-4 lg:px-14 xl:px-20 " >
-                <div data-dashboardSection>
-                    <div class="block sm:hidden relative mb-5" >
-                        <input placeholder="search" type="search" name="search" id="search " class="py-[10px]  pl-10 pr-3 rounded-md border border-[gainsboro] w-full">
-                        <img src="../../../images/search.svg" alt="search" class="absolute w-5 left-3 top-1/2 -translate-y-1/2" >
-                    </div>
+                <div class="dashboard" data-dashboardSection>
                     <div class="flex justify-between items-center rounded-md border border-[gainsboro] px-5 bg-white py-3  max-w-[1000px]">
                         <div class="flex gap-5 flex-col md:flex-row ">
                             <div class="flex items-center gap-2 text-sm"><span class="font-bold  capitalize">all </span> <span class="text-xs -mt-[2px] font-semibold px-1 py-1 shadow-md rounded-md bg-white">13</span></div>
@@ -74,6 +70,10 @@
                             <img class=" cursor-pointer w-4" src="../../../images/toggle.svg" alt="">
                             <span class=" cursor-pointer  justify-center items-center py-[0px] px-1 font-bold -mt-[2px] bg-white rounded-md shadow-md"> + </span>
                         </div>
+                    </div>
+                    <div class="block sm:hidden relative mt-5" >
+                        <input placeholder="search" type="search" name="search" id="search " class="py-[10px]  pl-10 pr-3 rounded-md border border-[gainsboro] w-full">
+                        <img src="../../../images/search.svg" alt="search" class="absolute w-5 left-3 top-1/2 -translate-y-1/2" >
                     </div>
                     <div class="flex gap-10 lg:gap-[5%]  mt-10 flex-col items-center lg:items-[unset] lg:flex-row max-w-[1000px]">
                         <div class=" w-full sm:w-[400px] " >
@@ -148,8 +148,25 @@
                         </div>
                     </div>
                 </div>
-                <div data-profileSection class="hide">
-                    profile
+                <div data-profileSection class="hide profile md:mt-[-40px] sm:pl-8">
+                    <div class="mb-5 w-fit flex flex-col items-center">
+                        <img src="../../../images/currentUser.png" class="rounded-full mb-2 w-28 h-28" />
+                        <p class="text-xs hover:underline cursor-pointer text-primaryRed select-none">Change photo</p>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                        <p class="font-semibold flex items-center gap-3">Name: <span class="font-normal">Suleiman Abdullahi</span></p>
+                        <p class="font-semibold flex items-center gap-3">Sex: <span class="font-normal">Male</span></p>
+                        <p class="font-semibold flex items-center gap-3">Age: <span class="font-normal">30</span></p>
+                        <p class="font-semibold flex items-center gap-3">Occupation: <span class="font-normal">Student </span></p>
+                        <p class="font-semibold flex items-center gap-3">Marital Status: <span class="font-normal">Single</span></p>
+                        <p class="font-semibold flex items-center gap-3">Location: <span class="font-normal">Miami</span></p>
+                        <p class="font-semibold flex items-center gap-3">Marital Status: <span class="font-normal">Single</span></p>
+                        <p class="font-semibold flex items-center gap-3">Address: <span class="font-normal">Off 143, Avenue, Number 443 Syd cresent</span></p>
+                    </div>
+                    <button class="flex px-10 py-2 gap-[10px] items-center mt-10 bg-primaryRed rounded-md text-white">
+                        <img class="w-4 brightness-0 invert" src="../../../images/edit.svg" alt="edit">
+                        <span>Edit</span>
+                    </button>
                 </div>
             </div>
         </main>

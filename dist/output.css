@@ -782,6 +782,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: -1.25rem;
 }
 
+.-mt-6 {
+  margin-top: -1.5rem;
+}
+
 .block {
   display: block;
 }
@@ -876,6 +880,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .h-1 {
   height: 0.25rem;
+}
+
+.h-28 {
+  height: 7rem;
 }
 
 .min-h-\[700px\] {
@@ -1042,6 +1050,13 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.select-none {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .grid-cols-\[1fr\2c 1\.5fr\] {
@@ -1549,6 +1564,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: 500;
 }
 
+.font-normal {
+  font-weight: 400;
+}
+
 .capitalize {
   text-transform: capitalize;
 }
@@ -1943,6 +1962,34 @@ footer .socials img {
 }
 
 @media screen and ( max-width:768px ) {
+  .openOverlay {
+    position: fixed;
+  }
+
+  .openOverlay {
+    top: 0px;
+  }
+
+  .openOverlay {
+    left: 0px;
+  }
+
+  .openOverlay {
+    bottom: 0px;
+  }
+
+  .openOverlay {
+    right: 0px;
+  }
+
+  .openOverlay {
+    z-index: 1;
+  }
+
+  .openOverlay {
+    background-color: rgba(0,0,0,.5);
+  }
+
   h2 {
     text-align: center;
   }
@@ -2042,6 +2089,11 @@ footer .socials img {
   color: rgb(248 116 88 / var(--tw-text-opacity));
 }
 
+.hover\:underline:hover {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
 @media (min-width: 480px) {
   .sm\:right-8 {
     right: 2rem;
@@ -2133,6 +2185,10 @@ footer .socials img {
     padding-right: 3.5rem;
   }
 
+  .sm\:pl-8 {
+    padding-left: 2rem;
+  }
+
   .sm\:text-sm {
     font-size: 0.875rem;
     line-height: 1.25rem;
@@ -2170,12 +2226,40 @@ footer .socials img {
     margin-bottom: 2.5rem;
   }
 
+  .md\:-mt-6 {
+    margin-top: -1.5rem;
+  }
+
+  .md\:-mt-10 {
+    margin-top: -2.5rem;
+  }
+
+  .md\:mt-\[10\] {
+    margin-top: 10;
+  }
+
+  .md\:mt-\[-10\] {
+    margin-top: -10;
+  }
+
+  .md\:mt-\[-40\] {
+    margin-top: -40;
+  }
+
+  .md\:mt-\[-40px\] {
+    margin-top: -40px;
+  }
+
   .md\:block {
     display: block;
   }
 
   .md\:flex {
     display: flex;
+  }
+
+  .md\:hidden {
+    display: none;
   }
 
   .md\:h-\[350px\] {

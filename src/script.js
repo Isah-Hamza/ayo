@@ -48,16 +48,19 @@ var profileSection = document.querySelector('[data-profileSection]');
 var userDashboardMenu = document.querySelector('[data-userDashboardMenu]');
 var userDashboardClose = document.querySelector('[data-userDashboardClose]');
 var userDashboardAside = document.querySelector('[data-userDashboardAside]');
+var userDashboardOverlay = document.querySelector('.overlay');
 // user dashbaord starts
 userDashboardMenu === null || userDashboardMenu === void 0 ? void 0 : userDashboardMenu.addEventListener('click', function () {
     userDashboardAside.classList.toggle('animateFromLeft');
     userDashboardClose.classList.toggle('hide');
     userDashboardMenu.classList.toggle('hide');
+    userDashboardOverlay.classList.toggle('openOverlay');
 });
 userDashboardClose === null || userDashboardClose === void 0 ? void 0 : userDashboardClose.addEventListener('click', function () {
     userDashboardAside.classList.toggle('animateFromLeft');
     userDashboardClose.classList.toggle('hide');
     userDashboardMenu.classList.toggle('hide');
+    userDashboardOverlay.classList.toggle('openOverlay');
 });
 if (dashboardUL) {
     (_a = Array.from(dashboardUL === null || dashboardUL === void 0 ? void 0 : dashboardUL.children)) === null || _a === void 0 ? void 0 : _a.forEach(function (element1) {
@@ -68,7 +71,15 @@ if (dashboardUL) {
                 element1.classList.add('activeTab');
                 element2.classList.remove('activeTab');
                 Array.from(dashboardItems.children).forEach(function (item) {
-                    console.log(item);
+                    var ulClass = element1.getAttribute('id');
+                    if (ulClass == null || ulClass == undefined || ulClass == "")
+                        return;
+                    if (item.classList.contains(ulClass)) {
+                        item.classList.remove('hide');
+                    }
+                    else {
+                        item.classList.add('hide');
+                    }
                 });
             });
             userDashboardClose.click();
