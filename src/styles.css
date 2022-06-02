@@ -15,7 +15,13 @@
   background: linear-gradient(180deg, #ECECEC 17.71%, #C9C9C9 90.44%);
   /* box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.35); */
 }
-
+.user-table tbody tr { @apply border-t border-[gainsboro] py-2}
+.user-table tbody tr td { @apply py-2}
+.user-table thead tr th { @apply py-2}
+.user-table table thead  tr th { @apply text-left  }
+.user-table table tbody tr td:nth-child(1) { @apply w-[400px] }
+.user-table th:not(th:first-child), .user-table td:not(td:first-child){ @apply px-5}
+/* .user-table table tbody tr td:nth-child(2) { @apply w-max-[100px] } */
 .question-body{ 
   transition: all .5s ease-in-out;
   height: 0;
@@ -24,6 +30,10 @@
  }
  .question-body.open{
    margin-top: 0 !important;
+ }
+
+ .animateFromLeft{
+   @apply left-0
  }
  
 .circle{ @apply flex relative h-8 lg:h-12 w-8 lg:w-12 rounded-full border border-[gainsboro] justify-center items-center  }
@@ -34,6 +44,9 @@
 }
 .scale{
   transform: scaleY(1) !important ;
+}
+.activeTab{
+  @apply bg-[#f4f4f4] p-2 !font-semibold
 }
 .group.active > .circle { @apply border-primaryRed !text-primaryRed }
 nav ul li{

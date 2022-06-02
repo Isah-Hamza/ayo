@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
+    <linkstyle
     rel="stylesheet"
     href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
     />
@@ -30,7 +30,7 @@
                     <li><a href="./blog.html">Blog</a></li>
                     <li><a href="./faq.html">FAQs</a></li>
                     <li><a href="./login.html">Login</a></li>
-                    <li ><button class=" cursor-pointer border border-primaryRed rounded-md px-6 py-2"> <a href="./register.html">Register</a> </button></li>
+                    <li ><button class=" cursor-pointer border text-white bg-primaryRed rounded-md px-6 py-2"> <a href="./register.html">Register</a> </button></li>
                     <li class="cursor-pointer hidden lg:block ">
                         <div class="linear rounded-full w-8 p-2">
                             <img src="../../images/avatar.svg" alt="avatar">
@@ -52,21 +52,26 @@
         </header>
         <main class="flex flex-col mt-[70px] " >
             <div data-overlay class=" hide fixed z-[1000] flex items-center justify-center  bg-primaryRed bg-opacity-70 left-0 top-0 right-0 !w-screen h-screen">
-                <div class="w-[90%] md:max-w-[700px] px-8 sm:px-14 pt-16 py-8 bg-white rounded-md relative" >
+                <div data-chooseIdentity class="w-[90%] md:max-w-[700px] px-8 sm:px-14 pt-16 py-8 bg-white rounded-md relative" >
                     <img src="../../images/icon-close.svg" alt="close " class="absolute cursor-pointer right-6 top-5 sm:right-8 sm:top-7 " data-closeOverlay>
                     <h2 class="text-2xl font-semibold mb-3 text-center">Privacy Prompt</h2>
                     <p class="mb-8 text-center">Would you like your identity be shared with others? </p>
                     <div class="sm:bg-black w-56 sm:w-80 mx-auto text-sm grid sm:grid-cols-2 gap-3 sm:gap-1 text-white rounded-xl sm:overflow-hidden ">
-                        <button class="w-full px-6 py-[10px] rounded-lg hide_identity text-black font-semibold">Don't Hide</button>
-                        <button class="w-full bg-black px-6 py-[10px] rounded-lg ">Hide My Identity</button>
+                        <button data-identity="true" class="w-full px-6 py-[10px] rounded-lg hide_identity text-black font-semibold">Don't Hide</button>
+                        <button data-identity="false" class="w-full bg-black px-6 py-[10px] rounded-lg ">Hide My Identity</button>
                     </div>
+                </div>
+                <div data-success  class="hide w-[90%] md:max-w-[600px] px-8 sm:px-14 pt-16 py-8 bg-white rounded-md relative"  >
+                    <img src="../../images/icon-close.svg" alt="close " class="absolute cursor-pointer right-6 top-5 sm:right-8 sm:top-7 " data-closeOverlay>
+                    <h2 class="text-center text-2xl font-semibold mb-4">Success Message</h2>
+                    <p class="text-center">Thank you. Your report has been submitted <br class="hidden md:block"> to the relevant quarter.</p>
                 </div>
             </div>
             <div class="" data-report="false">
                 <div class=" bg-customBlack w-full h-[calc(100vh-70px)] lg:h-[450px] relative flex justify-around items-center ">
                     <section class="!w-full gap-16 lg:gap-0 pb-10 lg:pb-[unset] lg:pl-[5%] xl:pl-0 flex  lg:grid grid-cols-[1fr,1fr] flex-col-reverse lg:flex-row items-center lg:items-start text-center lg:text-left justify-between text-white  " >
                         <div class="lg:mt-10">
-                            <h2 class="text-3xl lg:text-4xl leading-snug font-semibold">Ayo help you provide <br> security while keeping <br> you safe</h2>
+                            <h2 class="text-3xl lg:text-4xl leading-snug font-semibold">Ayo help you provide <br> security while keeping <br> you safe.</h2>
                             <button class="mt-14 text-white bg-primaryRed px-14 py-3 pb-4 rounded-md" ><span> Report Now </span><span class="text-xl ml-1 ">&rarr;</span> </button>
                         </div>
                         <div class="-mt-4 lg:mt-[unset] ml-5 lg:ml-0 relative lg:absolute w-[170%] sm:w-[500px] h-[300px] right-0 bottom-0 scale-[55%] sm:scale-[80%] md:scale-[unset] ">
@@ -83,7 +88,7 @@
                             a report, we promise and ensure complete confidentiality and anonymity. All information is shared with 
                             your company, as well as local, state, federal, and international law enforcement organizations, in order 
                             to communicate information about criminal activities in your area.</p>
-                            <button data-report_case_btn type='button' class="flex gap-2 mx-auto mt-5 items-center px-10 py-2 h-12 rounded-md bg-primaryRed text-white text-sm lg:text-base " ><span>Report A Case</span> <span class="text-2xl block -mt-1">&rarr;</span>  </button>
+                            <button data-report_case_btn type='button' class="flex gap-2 mx-auto mt-5 items-center px-10 py-2 h-12 rounded-md bg-primaryRed text-white text-sm lg:text-base " ><span>Report A Crime</span> <span class="text-2xl block -mt-1">&rarr;</span>  </button>
                         </section>
                 </div>
                 <div class="bg-faintRed py-10 " >

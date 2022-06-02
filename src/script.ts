@@ -18,7 +18,7 @@ const section3 = document.querySelector('[data-section="3"]');
 const selectFile  = document.querySelector('[data-selectFile]') as HTMLInputElement ;
 const selectedFile = document.querySelector('[data-selectedFile]') as HTMLParagraphElement ;
 const submitReportOverlay = document.querySelector('[data-overlay]') as HTMLDivElement ;
-const closeReportOverlay = document.querySelector('[data-closeOverlay]');
+const closeReportOverlay = document.querySelectorAll('[data-closeOverlay]');
 const questionHeaders = document.querySelectorAll('[data-questionHeader]');
 const questionBodys = document.querySelectorAll('[data-questionBody]');
 const items = document.querySelectorAll('[data-item]');
@@ -26,10 +26,69 @@ const items = document.querySelectorAll('[data-item]');
 const unselectedDiv = document.querySelector('[data-selected="false"]');
 const selectedDiv = document.querySelector('[data-selected="true"]');
 const goBackUnselectedBtn = document.querySelector('[data-goBackUnselected]');
+const hideIdentityBtn = document.querySelector('[data-identity="true"]');
+const dontHideIdentityBtn = document.querySelector('[data-identity="false"]');
+const chooseIdentityDiv = document.querySelector('[data-chooseIdentity]');
+const successDiv = document.querySelector('[data-success]'); 
+const loginBtn = document.querySelector('[data-login]');
+
+const dashboardUL = document.querySelector('[data-dashboardUL]');
+const dashboardLink = document.querySelector('[data-dashboardLink]');
+const profileLink = document.querySelector('[data-profileLink]');
+
+const dashboardItems = document.querySelector("[data-dashboardItems]");
+const dashbaordSection = document.querySelector('[data-dashbaordSection]');
+const profileSection = document.querySelector('[data-profileSection]');
+
+const userDashboardMenu = document.querySelector('[data-userDashboardMenu]');
+const userDashboardClose = document.querySelector('[data-userDashboardClose]');
+const userDashboardAside = document.querySelector('[data-userDashboardAside]');
+
+
+
+// user dashbaord starts
+
+userDashboardMenu?.addEventListener('click', () => {
+    userDashboardAside.classList.toggle('animateFromLeft');
+    userDashboardClose.classList.toggle('hide');
+    userDashboardMenu.classList.toggle('hide');
+})
+
+userDashboardClose?.addEventListener('click', () => {
+    userDashboardAside.classList.toggle('animateFromLeft');
+    userDashboardClose.classList.toggle('hide');
+    userDashboardMenu.classList.toggle('hide');
+})
+
+if(dashboardUL){
+    Array.from(dashboardUL?.children)?.forEach(element1 => {
+        element1.addEventListener('click', () => {
+            [...dashboardUL?.children].forEach(element2 => {
+                if(element1 == element2) return
+                element1.classList.add('activeTab');
+                element2.classList.remove('activeTab');
+                Array.from(dashboardItems.children).forEach(item =>{
+                    console.log(item)
+                })
+            });
+            userDashboardClose.click();
+        })
+    });
+}
+
+//user dashboard ends
 
 let pickedFile:File;
 
 console.log()
+
+//start login
+
+loginBtn?.addEventListener('click', () => {
+    window.location.href = '/src/pages/user_dashboard';
+})
+
+//end login
 
 // start faq  
 
@@ -94,8 +153,24 @@ questionHeaders?.forEach((header, index) => {
 
 // end faq  
 
-closeReportOverlay?.addEventListener('click', () => {
+closeReportOverlay?.forEach((elem, index) => elem.addEventListener('click', () => {
     submitReportOverlay.classList.toggle('hide');
+    if(index == 1){
+        chooseIdentityDiv.classList.remove('hide');
+        successDiv.classList.add('hide');
+        reportFasle.classList.remove('hide');
+        reportTrue.classList.add('hide');
+        document.body.scrollIntoView();
+    }
+}))
+
+hideIdentityBtn?.addEventListener('click', () => {
+    chooseIdentityDiv.classList.add('hide');
+    successDiv.classList.remove('hide');
+})
+dontHideIdentityBtn?.addEventListener('click', () => {
+    chooseIdentityDiv.classList.add('hide');
+    successDiv.classList.remove('hide');
 })
 
 submitReport?.addEventListener('click', () => {

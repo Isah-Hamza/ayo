@@ -1,3 +1,13 @@
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
+var _a;
 console.log('start of script');
 var menu = document.querySelector('[data-menu]');
 var closeBtn = document.querySelector('[data-closeBtn]');
@@ -17,15 +27,62 @@ var section3 = document.querySelector('[data-section="3"]');
 var selectFile = document.querySelector('[data-selectFile]');
 var selectedFile = document.querySelector('[data-selectedFile]');
 var submitReportOverlay = document.querySelector('[data-overlay]');
-var closeReportOverlay = document.querySelector('[data-closeOverlay]');
+var closeReportOverlay = document.querySelectorAll('[data-closeOverlay]');
 var questionHeaders = document.querySelectorAll('[data-questionHeader]');
 var questionBodys = document.querySelectorAll('[data-questionBody]');
 var items = document.querySelectorAll('[data-item]');
 var unselectedDiv = document.querySelector('[data-selected="false"]');
 var selectedDiv = document.querySelector('[data-selected="true"]');
 var goBackUnselectedBtn = document.querySelector('[data-goBackUnselected]');
+var hideIdentityBtn = document.querySelector('[data-identity="true"]');
+var dontHideIdentityBtn = document.querySelector('[data-identity="false"]');
+var chooseIdentityDiv = document.querySelector('[data-chooseIdentity]');
+var successDiv = document.querySelector('[data-success]');
+var loginBtn = document.querySelector('[data-login]');
+var dashboardUL = document.querySelector('[data-dashboardUL]');
+var dashboardLink = document.querySelector('[data-dashboardLink]');
+var profileLink = document.querySelector('[data-profileLink]');
+var dashboardItems = document.querySelector("[data-dashboardItems]");
+var dashbaordSection = document.querySelector('[data-dashbaordSection]');
+var profileSection = document.querySelector('[data-profileSection]');
+var userDashboardMenu = document.querySelector('[data-userDashboardMenu]');
+var userDashboardClose = document.querySelector('[data-userDashboardClose]');
+var userDashboardAside = document.querySelector('[data-userDashboardAside]');
+// user dashbaord starts
+userDashboardMenu === null || userDashboardMenu === void 0 ? void 0 : userDashboardMenu.addEventListener('click', function () {
+    userDashboardAside.classList.toggle('animateFromLeft');
+    userDashboardClose.classList.toggle('hide');
+    userDashboardMenu.classList.toggle('hide');
+});
+userDashboardClose === null || userDashboardClose === void 0 ? void 0 : userDashboardClose.addEventListener('click', function () {
+    userDashboardAside.classList.toggle('animateFromLeft');
+    userDashboardClose.classList.toggle('hide');
+    userDashboardMenu.classList.toggle('hide');
+});
+if (dashboardUL) {
+    (_a = Array.from(dashboardUL === null || dashboardUL === void 0 ? void 0 : dashboardUL.children)) === null || _a === void 0 ? void 0 : _a.forEach(function (element1) {
+        element1.addEventListener('click', function () {
+            __spreadArray([], dashboardUL === null || dashboardUL === void 0 ? void 0 : dashboardUL.children, true).forEach(function (element2) {
+                if (element1 == element2)
+                    return;
+                element1.classList.add('activeTab');
+                element2.classList.remove('activeTab');
+                Array.from(dashboardItems.children).forEach(function (item) {
+                    console.log(item);
+                });
+            });
+            userDashboardClose.click();
+        });
+    });
+}
+//user dashboard ends
 var pickedFile;
 console.log();
+//start login
+loginBtn === null || loginBtn === void 0 ? void 0 : loginBtn.addEventListener('click', function () {
+    window.location.href = '/src/pages/user_dashboard';
+});
+//end login
 // start faq  
 goBackUnselectedBtn === null || goBackUnselectedBtn === void 0 ? void 0 : goBackUnselectedBtn.addEventListener('click', function () {
     selectedDiv.classList.add('hide');
@@ -83,8 +140,23 @@ questionHeaders === null || questionHeaders === void 0 ? void 0 : questionHeader
     });
 });
 // end faq  
-closeReportOverlay === null || closeReportOverlay === void 0 ? void 0 : closeReportOverlay.addEventListener('click', function () {
+closeReportOverlay === null || closeReportOverlay === void 0 ? void 0 : closeReportOverlay.forEach(function (elem, index) { return elem.addEventListener('click', function () {
     submitReportOverlay.classList.toggle('hide');
+    if (index == 1) {
+        chooseIdentityDiv.classList.remove('hide');
+        successDiv.classList.add('hide');
+        reportFasle.classList.remove('hide');
+        reportTrue.classList.add('hide');
+        document.body.scrollIntoView();
+    }
+}); });
+hideIdentityBtn === null || hideIdentityBtn === void 0 ? void 0 : hideIdentityBtn.addEventListener('click', function () {
+    chooseIdentityDiv.classList.add('hide');
+    successDiv.classList.remove('hide');
+});
+dontHideIdentityBtn === null || dontHideIdentityBtn === void 0 ? void 0 : dontHideIdentityBtn.addEventListener('click', function () {
+    chooseIdentityDiv.classList.add('hide');
+    successDiv.classList.remove('hide');
 });
 submitReport === null || submitReport === void 0 ? void 0 : submitReport.addEventListener('click', function () {
     submitReportOverlay.classList.toggle('hide');

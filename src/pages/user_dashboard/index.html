@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../dist/output.css">
+    <title>AYO | USER DASHBOARD</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class = "flex fixed top-0 left-0 z-[100] justify-between items-center shadow-sm px-[5%] bg-white h-[70px]  w-full">
+            <div class="logo text-2xl font-bold">
+                <a href="/src/pages/user_dashboard/">
+                    <img src="../../../images/logo.png" alt="logo">
+                </a>
+            </div>
+            <nav data-nav class="fixed lg:static">
+                <ul class="flex items-center space-x-8">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="/src/pages/report.html">Report</a></li>
+                    <li><a href="#">Login</a></li>
+                    <img data-closeBtn src="../../../images/icon-close.svg" alt="icon-close" class="block lg:hidden absolute right-6 top-1">
+                </ul>
+                <div class="flex fixed bottom-0 justify-between px-10 bg-black  p-5 w-5/6 left-0 lg:hidden mt-5 space-x-4">
+                    <img class="w-5 cursor-pointer" src="../../../images/facebook-svgrepo-com.svg" alt="">
+                    <img class="w-5 cursor-pointer" src="../../../images/instagram-svgrepo-com.svg" alt="">
+                    <img class="w-5 cursor-pointer" src="../../../images/linkedin-svgrepo-com.svg" alt="">
+                    <img class="w-5 cursor-pointer" src="../../../images/twitter-svgrepo-com.svg" alt="">
+                </div>
+            </nav>
+            <div class="flex items-center gap-4 ">
+                <button class="hidden md:flex cursor-pointer border text-white bg-primaryRed rounded-md px-6 py-2"> Submit a Tip </button>
+                <div class="flex items-center gap-1">
+                    <img src="../../../images/hannah.png" alt="hannah" class="w-8 h-8">
+                    <p class="text-xs font-semibold leading-[12px] sm:leading-[unset] ">Abdullahi <br class="block sm:hidden"> Suleiman</p>
+                    <!-- <img src="../../../images/" alt=""> -->
+                </div>
+            </div>
+            <div data-userDashboardMenu class="btn block lg:hidden cursor-pointer">
+                <img src="../../../images/icon-menu.svg" alt="icon-menu" class="brightness-150 invert w-4 h-4 scale-x-150">
+            </div>
+            <div class="hide " data-userDashboardClose>
+                <img  src="../../../images/icon-close.svg" alt="icon-close" class="block lg:hidden w-5">
+            </div>
+        </header>
+        <main class = 'flex min-h-screen pt-[70px]'>
+            <div class="overlay"></div>
+            <aside data-userDashboardAside class="fixed h-[calc(100vh-70px)] -left-[250px] z-10 lg:h-auto lg:static border-r transition-all duration-500 ease-in-out bg-white border-[gainsboro] w-[250px] lg:w-1/5 px-2" >
+                <div class="mt-10">
+                    <ul data-dashboardUL class = 'flex flex-col  '>               
+                        <li data-dashboardLink class="activeTab cursor-pointer py-2 mb-1 !pl-8 flex items-center gap-2" > <img class="w-5" src="../../../images/dashboard.svg" alt="dashboard"><span>Dashboard</span> </li>
+                        <li data-profileLink class="flex items-center cursor-pointer py-2 mb-1 !pl-8 gap-3" > <img class = 'w-4' src="../../../images/user.svg" /> <span>Profile</span>  </li>
+                        <li class="flex items-center cursor-pointer py-2 mb-1 !pl-8 gap-2" > <img class="w-[22px]" src="../../../images/settings.svg" alt="settings"> <span>Settings</span> </li>
+                        <li class="flex mt-10 items-center cursor-pointer py-2 mb-1 !pl-8 gap-[10px]" > <img class="brightness-0 w-5" src="../../../images/Logout.svg" alt="logout"> <span>Logout</span> </li>
+                    </ul>
+                </div>
+            </aside>
+            <div data-dashboardItems class="bg-faintRed w-full py-10 md:py-20 px-4 lg:px-14 xl:px-20 " >
+                <div data-dashboardSection>
+                    <div class="block sm:hidden relative mb-5" >
+                        <input placeholder="search" type="search" name="search" id="search " class="py-[10px]  pl-10 pr-3 rounded-md border border-[gainsboro] w-full">
+                        <img src="../../../images/search.svg" alt="search" class="absolute w-5 left-3 top-1/2 -translate-y-1/2" >
+                    </div>
+                    <div class="flex justify-between items-center rounded-md border border-[gainsboro] px-5 bg-white py-3  max-w-[1000px]">
+                        <div class="flex gap-5 flex-col md:flex-row ">
+                            <div class="flex items-center gap-2 text-sm"><span class="font-bold  capitalize">all </span> <span class="text-xs -mt-[2px] font-semibold px-1 py-1 shadow-md rounded-md bg-white">13</span></div>
+                            <div class="flex items-center gap-2 text-sm"><span class="font-bold  capitalize">pending </span> <span class="text-xs -mt-[2px] font-semibold px-1 py-1 shadow-md rounded-md bg-white">01</span></div>
+                            <div class="flex items-center gap-2 text-sm"><span class="font-bold  capitalize">verified </span> <span class="text-xs -mt-[2px] font-semibold px-1 py-1 shadow-md rounded-md bg-white">07</span></div>
+                            <div class="flex items-center gap-2 text-sm"><span class="font-bold  capitalize">investigating </span> <span class="text-xs -mt-[2px] font-semibold px-1 py-1 shadow-md rounded-md bg-white">10</span></div>
+                        </div>
+                        <div class="gap-6 items-center hidden md:flex">
+                            <img class=" cursor-pointer w-4" src="../../../images/search.svg" alt="">
+                            <img class=" cursor-pointer w-4" src="../../../images/toggle.svg" alt="">
+                            <span class=" cursor-pointer  justify-center items-center py-[0px] px-1 font-bold -mt-[2px] bg-white rounded-md shadow-md"> + </span>
+                        </div>
+                    </div>
+                    <div class="flex gap-10 lg:gap-[5%]  mt-10 flex-col items-center lg:items-[unset] lg:flex-row max-w-[1000px]">
+                        <div class=" w-full sm:w-[400px] " >
+                            <div class="w-full justify-between flex items-center">
+                                <p class="font-bold">Recently Submitted</p>
+                                <div class="flex cursor-pointer items-center font-bold -mt-2">
+                                    <span>.</span>
+                                    <span>.</span>
+                                    <span>.</span>
+                                </div>
+                            </div>
+                            <div class="py-5 text-sm">
+                                <p>
+                                    A Nigerian health worker, Godbless Uwadiegwu, who pleaded guilty to sex crimes involving memory care patients
+                                     in the United States has been sentenced to three years in prison.
+                                </p>
+                            </div>
+                            <div class="flex text-sm justify-between items-center">
+                                <p class="opacity-70">2021/12/22 09:59 AM</p>
+                                <p class="opacity-70">pending</p>
+                            </div>
+                        </div>
+                        <div class="w-full overflow-auto user-table border text-sm border-[gainsboro] p-3 pt-1 rounded-md">
+                            <table class="min-w-[470px] md:min-w-[unset]">
+                                <thead>
+                                    <tr>
+                                        <th>Case</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                        <th>
+                                            <div class="flex flex-col font-bold -mt-5">
+                                                <span class="h-1 ">.</span>
+                                                <span class="h-1 ">.</span>
+                                                <span class="h-1 ">.</span>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>memory care patients in the United States has been sentenced to three years in prison.</td>
+                                        <td>
+                                            <div>
+                                                <p>2021/12/22</p>
+                                                <p>09:59 AM</p>
+                                            </div>
+                                        </td>
+                                        <td>Solved</td>
+                                    </tr>
+                                    <tr>
+                                        <td>memory care patients in the United States has been sentenced to three years in prison.</td>
+                                        <td>
+                                            <div>
+                                                <p>2021/12/22</p>
+                                                <p>09:59 AM</p>
+                                            </div>
+                                        </td>
+                                        <td>Pending</td>
+                                    </tr>
+                                    <tr>
+                                        <td>memory care patients in the United States has been sentenced to three years in prison.</td>
+                                        <td>
+                                            <div>
+                                                <p>2021/12/22</p>
+                                                <p>09:59 AM</p>
+                                            </div>
+                                        </td>
+                                        <td>Solved</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div data-profileSection class="hide">
+                    profile
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="../../script.js"></script>
+</body>
+</html>
