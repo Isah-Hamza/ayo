@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../dist/output.css">
+    <title>AYO | ADMIN DASHBOARD</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class = "flex fixed top-0 left-0 z-[100] items-center shadow-sm px-[5%] bg-white h-[70px]  w-full">
+            <div class="logo text-2xl font-bold">
+                <a href="/src/pages/user_dashboard/">
+                    <img src="../../../images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="hidden md:block relative ml-20 ">
+                <input type="search" placeholder="Search Data..." class="pl-10 px-4 py-3 appearance-none outline-none w-[300px]" >
+                <img src="../../../images/search.svg" alt="search icon" class="w-5 absolute top-1/2 -translate-y-1/2 left-3 "  />
+            </div>
+            <div class="flex items-center gap-4 ml-auto mr-10 md:mr-[unset] ">
+                <div class="flex items-center gap-1">
+                    <img src="../../../images/hannah.png" alt="hannah" class="w-8 h-8">
+                    <p class="hidden md:block text-xs font-semibold leading-[12px] sm:leading-[unset] ">Abdullahi <br class="block sm:hidden"> Suleiman</p>
+                </div>
+            </div>
+            <div data-userDashboardMenu class="btn block lg:hidden cursor-pointer">
+                <img src="../../../images/icon-menu.svg" alt="icon-menu" class="brightness-150 invert w-4 h-4 scale-x-150">
+            </div>
+            <div class="hide lg:hidden " data-userDashboardClose>
+                <img  src="../../../images/icon-close.svg" alt="icon-close" class="block lg:hidden w-5">
+            </div>
+        </header>
+        <main class = 'flex min-h-screen pt-[70px]'>
+            <div class="overlay "></div>
+            <aside data-userDashboardAside class="fixed h-full max-h-[calc(100vh-70px)] overflow-auto -left-[250px] z-10 lg:h-auto lg:static border-r transition-all duration-500 ease-in-out bg-white border-[gainsboro] w-[250px] lg:w-1/5 px-2" >
+                <div class="mt-10">
+                    <ul data-dashboardUL class = 'flex flex-col  '>               
+                        <li id='dashboard' data-dashboardLink class="activeTab cursor-pointer py-2 mb-1 !pl-8 flex items-center gap-2" > <img class="w-5" src="../../../images/dashboard.svg" alt="dashboard"><span>Dashboard</span> </li>
+                        <li id="all-talent" data-profileLink class="flex items-center cursor-pointer py-2 mb-1 !pl-8 gap-3" > <img class = 'w-4' src="../../../images/user.svg" /> <span>All Talent</span>  </li>
+                        <li id="users" data-profileLink class="flex items-center cursor-pointer py-2 mb-1 !pl-8 gap-3" > <img class = 'w-4' src="../../../images/user.svg" /> <span>User</span>  </li>
+                        <li id="settings" class="flex items-center cursor-pointer py-2 mb-1 !pl-8 gap-2" > <img class="w-[22px]" src="../../../images/settings.svg" alt="settings"> <span>Settings</span> </li>
+                        <li id="report-center"  class="flex items-center cursor-pointer py-2 mb-1 !pl-8 gap-3" > <img class = 'w-4' src="../../../images/user.svg" /> <span>Report Center</span>  </li>
+                        <li id="logout" class="flex mt-10 items-center cursor-pointer py-2 mb-1 !pl-8 gap-[10px]" > <img class="brightness-0 w-5" src="../../../images/Logout.svg" alt="logout"> <span>Logout</span> </li>
+                    </ul>
+                </div>
+            </aside>
+            <div data-dashboardItems class="max-h-[calc(100vh-70px)] bg-faintRed w-full py-6 md:py-16 px-4 lg:px-14 xl:px-20 overflow-auto" >
+                <div class="dashboard" data-dashboardSection>
+                    <div class="pl-5"> Welcome back, <span class=" font-semibold text-lg" >Admin</span> </div>
+                    <div class="w-full mt-5 py-10 px-5 bg-white rounded-xl ">
+                        <div class="flex justify-between pb-5 border-b border-b-[gainsboro]">
+                            <p class="font-semibold text-base sm:text-xl">Recent Entries</p>
+                            <div class="flex gap-10 items-center">
+                                <div class="hidden md:flex gap-1 items-center">
+                                    <div class="bg-orange-400 w-3 h-3 rounded-full" ></div>
+                                    <p class="font-medium">Previous Month</p>
+                                </div>
+                                <div class="hidden md:flex gap-1 items-center">
+                                    <div class="bg-blue-800 w-3 h-3 rounded-full" ></div>
+                                    <p class="font-medium">Selected Month</p>
+                                </div>
+                                <div>
+                                    <select name="date" id="date">
+                                        <option value="april2021">April 2021</option>
+                                        <option value="april2022">April 2022</option>
+                                        <option value="april2023">April 2023</option>
+                                        <option value="april2024">April 2024</option>
+                                        <option value="april2025">April 2025</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <img src="../../../images/toggle.svg" alt="filter icon">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full overflow-auto user-table admin-table text-sm p-3 pt-1 rounded-md">
+                            <table class="whitespace-nowrap min-w-[470px] md:min-w-[unset] w-full">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Regarding</th>
+                                        <th>Crime</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Syd Salman</td>
+                                        <td>Front end developer</td>
+                                        <td>mayorsuleiman</td>
+                                        <td>
+                                                <p>2021/12/22</p>
+                                        </td>
+                                        <td> <button class="bg-orange-400 text-white rounded-lg px-5 py-2"> Acknowledge </button></td>
+                                        <td>
+                                                <div class="cursor-pointer flex -mt-7 font-bold">
+                                                    <span class="text-2xl ">.</span>
+                                                    <span class="text-2xl ">.</span>
+                                                    <span class="text-2xl ">.</span>
+                                                </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ibrahim Green</td>
+                                        <td>UI/UX Designer</td>
+                                        <td>mayorsuleiman</td>
+                                        <td>
+                                                <p>2021/12/22</p>
+                                        </td>
+                                        <td> <button disabled class="opacity-70 bg-orange-400 cursor-not-allowed text-white rounded-lg px-5 py-2"> Acknowledged </button></td>
+                                        <td>
+                                            <div class="cursor-pointer flex -mt-7 font-bold">
+                                                <span class="text-2xl ">.</span>
+                                                <span class="text-2xl ">.</span>
+                                                <span class="text-2xl ">.</span>
+                                            </div>
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jasmine Mccarthy</td>
+                                        <td>Front end developer</td>
+                                        <td>mayorsuleiman</td>
+                                        <td>
+                                                <p>2021/12/22</p>
+                                        </td>
+                                        <td> <button class="bg-orange-400 text-white rounded-lg px-5 py-2"> Acknowledge </button></td>
+                                        <td>
+                                            <div class="cursor-pointer flex -mt-7 font-bold">
+                                                <span class="text-2xl ">.</span>
+                                                <span class="text-2xl ">.</span>
+                                                <span class="text-2xl ">.</span>
+                                            </div>
+                                    </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Syd Salman</td>
+                                        <td>Front end developer</td>
+                                        <td>mayorsuleiman</td>
+                                        <td>
+                                                <p>2021/12/22</p>
+                                        </td>
+                                        <td> <button disabled class="opacity-70 bg-orange-400 cursor-not-allowed text-white rounded-lg px-5 py-2"> Acknowledged </button></td>
+                                        <td>
+                                            <div class="cursor-pointer flex -mt-7 font-bold">
+                                                <span class="text-2xl ">.</span>
+                                                <span class="text-2xl ">.</span>
+                                                <span class="text-2xl ">.</span>
+                                            </div>
+                                    </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-5 mt-10">
+                        <div class="w-full md:w-2/3 bg-white rounded-xl p-5">
+                            <div class="header w-full flex items-center justify-between border-b border-[gainsboro] pb-3">
+                                <div class="flex gap-4 items-center">
+                                    <button class="w-10 h-10 rounded-full bg-[#f5f5f5]"></button>
+                                    <div class="">
+                                        <p class="text-lg font-medium">Crime Maping</p>
+                                        <p class="opacity-90">Crimes reported in various parts of the country</p>
+                                    </div>
+                                </div>
+                                
+                                 <div class="flex flex-col font-bold -mt-5">
+                                    <span class="h-1 ">.</span>
+                                    <span class="h-1 ">.</span>
+                                    <span class="h-1 ">.</span>
+                                </div>
+                            </div>
+                            <div class="map w-full flex flex-col-reverse sm:flex-row gap-5 mt-5 border-b border-[gainsboro] pb-8">
+                                <div class="left flex flex-col gap-5 sm:w-2/5">
+                                    <div class="flex flex-col gap-2" >
+                                        <div class="flex justify-between">
+                                            <p class="font-medium">Niger State</p>
+                                            <p class="opacity-80 text-gray-600">200 users</p>
+                                        </div>
+                                        <div class="bg-[#f5f5f5] w-full rounded-xl h-3">
+                                            <div class="bg-blue-600 w-1/3 h-full rounded-xl"></div>
+                                        </div>
+                                    </div>
+                                  
+                                    <div class="flex flex-col gap-2" >
+                                        <div class="flex justify-between">
+                                            <p class="font-medium">Enugu</p>
+                                            <p class="opacity-80 text-gray-600">103 users</p>
+                                        </div>
+                                        <div class="bg-[#f5f5f5] w-full rounded-xl h-3">
+                                            <div class="bg-blue-600 w-1/4 h-full rounded-xl"></div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col gap-2" >
+                                        <div class="flex justify-between">
+                                            <p class="font-medium">Jos</p>
+                                            <p class="opacity-80 text-gray-600">239 users</p>
+                                        </div>
+                                        <div class="bg-[#f5f5f5] w-full rounded-xl h-3">
+                                            <div class="bg-blue-600 w-1/2 h-full rounded-xl"></div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col gap-2" >
+                                        <div class="flex justify-between">
+                                            <p class="font-medium">Abuja</p>
+                                            <p class="opacity-80 text-gray-600">78 users</p>
+                                        </div>
+                                        <div class="bg-[#f5f5f5] w-full rounded-xl h-3">
+                                            <div class="bg-blue-600 w-1/4 h-full rounded-xl"></div>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col gap-2" >
+                                        <div class="flex justify-between">
+                                            <p class="font-medium">Gombe</p>
+                                            <p class="opacity-80 text-gray-600">78 users</p>
+                                        </div>
+                                        <div class="bg-[#f5f5f5] w-full rounded-xl h-3">
+                                            <div class="bg-blue-600 w-1/4 h-full rounded-xl"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right grow h-[215px] sm:h-[unset]">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3934.13512014097!2d6.544134714279514!3d9.583619382695478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104c7107fcda5791%3A0xb371b8801b35c6db!2sFederal%20university%20of%20technology%20minna!5e0!3m2!1sen!2sng!4v1655411736823!5m2!1sen!2sng" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                            <div class="">
+                                <button class="flex gap-3 items-center ml-auto mr-3 py-3 pt-6 font-medium ">  <span>SEE DETAILS</span> <span> &rarr; </span> </button>
+                            </div>
+                        </div>
+                        <div class="p-5 bg-white rounded-xl w-full md:w-1/3 flex flex-col">
+                            <div class="flex justify-between items-center pb-5 pt-3 border-b border-[gainsboro]">
+                                <p class="font-medium">Crime Mapping</p>
+                                    <div class="flex text-xl flex-col font-bold -mt-8">
+                                        <span class="h-1 ">.</span>
+                                        <span class="h-1 ">.</span>
+                                        <span class="h-1 ">.</span>
+                                    </div>
+                            </div>
+                            <div class="py-5 flex flex-col gap-2">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, consequuntur!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, consequuntur!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, consequuntur!</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, consequuntur!</p>
+                            </div>
+                            <div class="mt-auto border-t border-t-[gainsboro]">
+                                <button class="flex gap-3 items-center ml-auto mr-3 py-3 pt-6 font-medium ">  <span>SEE DETAILS</span> <span> &rarr; </span> </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hide all-talent"> All Talents</div>
+                <div class="hide users "> Users</div>
+                <div class="hide settings"> Settings </div>
+                <div class="hide report-center"> Report Center </div>
+                <div class="hide logout"> Log Out </div>
+            </div>
+        </main>
+    </div>
+    <script src="../../script.js"></script>
+</body>
+</html>
