@@ -1389,6 +1389,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-color: rgb(248 116 88 / var(--tw-border-opacity));
 }
 
+.border-gray-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(75 85 99 / var(--tw-border-opacity));
+}
+
 .border-b-\[gainsboro\] {
   --tw-border-opacity: 1;
   border-bottom-color: rgb(220 220 220 / var(--tw-border-opacity));
@@ -1490,6 +1495,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .p-\[5\%\] {
   padding: 5%;
+}
+
+.p-1 {
+  padding: 0.25rem;
 }
 
 .px-\[5\%\] {
@@ -1605,6 +1614,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-\[0px\] {
   padding-top: 0px;
   padding-bottom: 0px;
+}
+
+.py-\[1px\] {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .pb-4 {
@@ -2564,6 +2583,10 @@ footer .socials img {
 
   .md\:gap-10 {
     gap: 2.5rem;
+  }
+
+  .md\:gap-2 {
+    gap: 0.5rem;
   }
 
   .md\:space-x-4 > :not([hidden]) ~ :not([hidden]) {
