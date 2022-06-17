@@ -349,7 +349,7 @@
         const closeUserDetails = document.querySelector('[data-closeUserDetails]');
 
         const tableBody = document.querySelector('[data-userTableBody]');
-        let fakeData = new Array(20).fill('Empty');
+        let fakeData = new Array(15).fill('Empty');
         fakeData = fakeData.map((item,index) => {
             return {
                 img:faker.image.avatar(300,300, true),
@@ -364,6 +364,10 @@
                 userImage.src = item.img;
                 userDetails.classList.remove('hide');
                 userDetails.scrollIntoView({behavior:'smooth'})
+                Array.from(tableBody.children).forEach(item => {
+                    item.classList.remove('active');
+                })
+                tr.classList.add('active');
             });
             tr.classList.add('user-tr') 
             const checkbox = document.createElement('input');
