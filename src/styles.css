@@ -105,6 +105,14 @@ footer .socials img{
     footer p{@apply text-[13px]}
     .indicator{ width: 85px; }
 }
+.user-img{
+  @apply w-8 h-8 rounded-full
+}
+.checkbox{ @apply mt-1 }
+.user-tr{
+  @apply cursor-pointer hover:bg-[#f5f5f5]
+}
+.user-tr td{ @apply pl-5}
 
 .swiper {
     margin-inline:auto;

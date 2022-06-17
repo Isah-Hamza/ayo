@@ -49,6 +49,13 @@ var userDashboardMenu = document.querySelector('[data-userDashboardMenu]');
 var userDashboardClose = document.querySelector('[data-userDashboardClose]');
 var userDashboardAside = document.querySelector('[data-userDashboardAside]');
 var userDashboardOverlay = document.querySelector('.overlay');
+var userDetails = document.querySelector('[data-userDetails]');
+var closeUserDetails = document.querySelector('[data-closeUserDetails]');
+// admin dashboard starts
+closeUserDetails === null || closeUserDetails === void 0 ? void 0 : closeUserDetails.addEventListener('click', function () {
+    userDetails.classList.toggle('hide');
+});
+// admin dashbaord ends
 // user dashbaord starts
 userDashboardMenu === null || userDashboardMenu === void 0 ? void 0 : userDashboardMenu.addEventListener('click', function () {
     userDashboardAside.classList.toggle('animateFromLeft');

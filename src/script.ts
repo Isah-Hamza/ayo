@@ -45,7 +45,17 @@ const userDashboardClose = document.querySelector('[data-userDashboardClose]');
 const userDashboardAside = document.querySelector('[data-userDashboardAside]');
 const userDashboardOverlay = document.querySelector('.overlay');
 
+const userDetails = document.querySelector('[data-userDetails]');
+const closeUserDetails = document.querySelector('[data-closeUserDetails]');
 
+
+// admin dashboard starts
+
+closeUserDetails?.addEventListener('click', () => {
+    userDetails.classList.toggle('hide');
+})
+
+// admin dashbaord ends
 
 // user dashbaord starts
 

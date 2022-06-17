@@ -34,7 +34,7 @@
         </header>
         <main class = 'flex min-h-screen pt-[70px]'>
             <div class="overlay "></div>
-            <aside data-userDashboardAside class="fixed h-full max-h-[calc(100vh-70px)] overflow-auto -left-[250px] z-10 lg:h-auto lg:static border-r transition-all duration-500 ease-in-out bg-white border-[gainsboro] w-[250px] lg:w-1/5 px-2" >
+            <aside data-userDashboardAside class="fixed h-full max-h-[calc(100vh-70px)] overflow-auto -left-[250px] z-10 lg:h-auto lg:static border-r transition-all duration-500 ease-in-out bg-white border-[gainsboro] w-[250px] lg:w-1/5 min-w-[250px] px-2" >
                 <div class="mt-10">
                     <ul data-dashboardUL class = 'flex flex-col  '>               
                         <li id='dashboard' data-dashboardLink class="activeTab cursor-pointer py-2 mb-1 !pl-8 flex items-center gap-2" > <img class="w-5" src="../../../images/dashboard.svg" alt="dashboard"><span>Dashboard</span> </li>
@@ -51,7 +51,7 @@
                     <div class="pl-5"> Welcome back, <span class=" font-semibold text-lg" >Admin!</span> </div>
                     <div class="w-full mt-5 py-10 px-5 bg-white rounded-xl ">
                         <div class="flex justify-between pb-5 border-b border-b-[gainsboro]">
-                            <p class="font-semibold text-base sm:text-xl">Recent Entries</p>
+                            <p class="font-semibold text-base sm:text-xl mt-1">Recent Entries</p>
                             <div class="flex gap-10 items-center">
                                 <div class="hidden md:flex gap-1 items-center">
                                     <div class="bg-orange-400 w-3 h-3 rounded-full" ></div>
@@ -62,7 +62,7 @@
                                     <p class="font-medium">Selected Month</p>
                                 </div>
                                 <div>
-                                    <select name="date" id="date">
+                                    <select name="date" id="date" class="border border-[gainsboro] bg-transparent outline-none px-5 py-[6px] rounded-lg" >
                                         <option value="april2021">April 2021</option>
                                         <option value="april2022">April 2022</option>
                                         <option value="april2023">April 2023</option>
@@ -70,7 +70,7 @@
                                         <option value="april2025">April 2025</option>
                                     </select>
                                 </div>
-                                <div>
+                                <div class="hidden sm:block">
                                     <img src="../../../images/toggle.svg" alt="filter icon">
                                 </div>
                             </div>
@@ -232,7 +232,7 @@
                         </div>
                         <div class="p-5 bg-white rounded-xl w-full md:w-1/3 flex flex-col">
                             <div class="flex justify-between items-center pb-5 pt-3 border-b border-[gainsboro]">
-                                <p class="font-medium">Crime Mapping</p>
+                                <p class="font-medium">Crime Maping</p>
                                     <div class="flex text-xl flex-col font-bold -mt-8">
                                         <span class="h-1 ">.</span>
                                         <span class="h-1 ">.</span>
@@ -252,13 +252,132 @@
                     </div>
                 </div>
                 <div class="hide all-talent"> All Talents</div>
-                <div class="hide users "> Users</div>
+                <div class="hide users ">
+                    <div data-userDetails class="mb-14 ">
+                        <p class="font-medium mb-5 text-lg">User Details</p>
+                        <div class="w- full flex-col md:flex-row flex gap-5 md:gap-10 bg-white px-5 md:px-10 lg:px-16 py-10 relative ">
+                            <span data-closeUserDetails="" class="scale-125 cursor-pointer font-light text-3xl absolute right-4 top-1">&times;</span>
+                            <div><img data-userImage class="rounded-lg w-20 h-24 object-contain" src="../../../images/blog1.png" alt=""></div>
+                            <div class="flex flex-col gap-2">
+                                <div class="flex gap-2">
+                                    <p class="font-medium">Name:</p>
+                                    <p data-name class="">Jane Chuckwu</p>
+                                </div>
+                                <div class="flex gap-2">
+                                    <p class="font-medium">Sex:</p>
+                                    <p class="">Female</p>
+                                </div>
+                                <div class="flex gap-2">
+                                    <p class="font-medium">Age:</p>
+                                    <p class="">23</p>
+                                </div>
+                                <div class="flex gap-2">
+                                    <p class="font-medium">Occupation:</p>
+                                    <p class="">Nurse</p>
+                                </div>
+                                <div class="flex gap-2">
+                                    <p class="font-medium">Marital Status:</p>
+                                    <p class="">Single</p>
+                                </div>
+                                <div class="flex gap-2">
+                                    <p class="font-medium">Location:</p>
+                                    <p class="">Naiymi</p>
+                                </div>
+                                <div class="flex gap-2">
+                                    <p class="font-medium">Address:</p>
+                                    <p class="">Off 143, Avenue, No. 443 Syd crescent</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <select name="filter" id="filter" class="font-medium outline-none border-none bg-transparent" >
+                                <option value="all">All(56)</option>
+                                <option value="male">Female(32)</option>
+                                <option value="female">Male(24)</option>
+                            </select>
+                        </div>
+                        <div class="w-full bg-white mt-5 overflow-auto user-table admin-table text-sm p-3 pt-1 rounded-md">
+                            <table  class="whitespace-nowrap min-w-[470px] md:min-w-[unset] w-full">
+                                <thead>
+                                    <tr>
+                                        <th class="pl-5"> <input type="checkbox" name="" id=""> </th>
+                                        <th> Image </th>
+                                        <th> Title </th>
+                                        <th> Date </th>
+                                        <th> Action </th>
+                                    </tr>
+                                </thead>
+                                <tbody data-userTableBody>
+    
+                                </tbody>
+                            </table>
+                         </div>
+                    </div>
+                </div>
                 <div class="hide settings"> Settings </div>
                 <div class="hide report-center"> Report Center </div>
                 <div class="hide logout"> Log Out </div>
             </div>
         </main>
     </div>
+    <script type="text/javascript" src="https://unpkg.com/@faker-js/faker"></script>
     <script src="../../script.js"></script>
+    <script type="module" >
+        import { faker } from 'https://cdn.skypack.dev/@faker-js/faker';
+        const userDetails = document.querySelector('[data-userDetails]');
+        const userFullName = document.querySelector('[data-name]');
+        const userImage = document.querySelector('[data-userImage]');
+        const closeUserDetails = document.querySelector('[data-closeUserDetails]');
+
+        const tableBody = document.querySelector('[data-userTableBody]');
+        let fakeData = new Array(5).fill('Empty');
+        fakeData = fakeData.map((item,index) => {
+            return {
+                img:faker.image.avatar(300,300, true),
+                fullName: faker.name.findName(),
+                date: faker.date.past().toString().slice(4,15),
+            }
+        })
+        fakeData.forEach((item,index) => {
+            const tr = document.createElement('tr');
+            tr.addEventListener('click',() => {
+                userFullName.textContent = item.fullName;
+                userImage.src = item.img;
+                userDetails.classList.remove('hide');
+                userDetails.scrollIntoView({behavior:'smooth'})
+            });
+            tr.classList.add('user-tr') 
+            const checkbox = document.createElement('input');
+            checkbox.type = 'checkbox';
+            checkbox.classList.add('checkbox');
+            const image = document.createElement('img');
+            image.src = item.img;
+            image.classList.add('user-img');
+            const fullName = document.createElement('p');
+            fullName.textContent = item.fullName;
+            const date = document.createElement('p');
+            date.textContent = item.date;
+
+            const td1 = document.createElement('td');
+            td1.appendChild(checkbox);
+            const td2 = document.createElement('td');
+            td2.appendChild(image);
+            const td3 = document.createElement('td');
+            td3.appendChild(fullName);
+            const td4 = document.createElement('td');
+            td4.appendChild(date);
+
+            tr.appendChild(td1);
+            tr.appendChild(td2);
+            tr.appendChild(td3);
+            tr.appendChild(td4);
+
+            tableBody.appendChild(tr);
+
+        })
+        console.log(fakeData);
+   </script>
 </body>
 </html>
