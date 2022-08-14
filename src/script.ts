@@ -3,7 +3,7 @@ console.log('start of script');
 const menu = document.querySelector('[data-menu]');
 const closeBtn = document.querySelector('[data-closeBtn]');
 const nav = document.querySelector('[data-nav]');
-const report_case_btn = document.querySelector('[data-report_case_btn]');
+const report_case_btn = document.querySelectorAll('[data-report_case_btn]');
 const reportFasle = document.querySelector('[data-report="false"]');
 const reportTrue = document.querySelector('[data-report="true"]');
 const prevStep1 = document.querySelector('[data-prevStep1]');
@@ -98,8 +98,6 @@ if(dashboardUL){
 //user dashboard ends
 
 let pickedFile:File;
-
-console.log()
 
 //start login
 
@@ -202,10 +200,19 @@ selectFile?.addEventListener('change',(e: MouseEvent) => {
     selectedFile.innerText = target.files[0].name;
 })
 
-report_case_btn?.addEventListener('click', () => {
-    reportFasle.classList.add('hide');
-    reportTrue.classList.remove('hide');
-    section1.parentElement.scrollIntoView({behavior:"smooth"})
+if(report_case_btn){
+    console.log(report_case_btn);
+}else{
+    console.log('else');
+}
+
+report_case_btn?.forEach(btn => {
+    btn?.addEventListener('click', () => {
+        reportFasle.classList.add('hide');
+        reportTrue.classList.remove('hide');
+        section1.parentElement.scrollIntoView({behavior:"smooth"})
+    })
+
 })
 
 prevStep1?.addEventListener('click', () => {
