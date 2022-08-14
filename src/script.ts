@@ -15,7 +15,7 @@ const submitReport = document.querySelector('[data-submitReport]') as HTMLButton
 const section1 = document.querySelector('[data-section="1"]');
 const section2 = document.querySelector('[data-section="2"]');
 const section3 = document.querySelector('[data-section="3"]');
-const selectFile  = document.querySelector('[data-selectFile]') as HTMLInputElement ;
+const selectFile  = <HTMLInputElement> document.querySelector('[data-selectFile]');
 const selectedFile = document.querySelector('[data-selectedFile]') as HTMLParagraphElement ;
 const submitReportOverlay = document.querySelector('[data-overlay]') as HTMLDivElement ;
 const closeReportOverlay = document.querySelectorAll('[data-closeOverlay]');
@@ -32,7 +32,7 @@ const chooseIdentityDiv = document.querySelector('[data-chooseIdentity]');
 const successDiv = document.querySelector('[data-success]'); 
 const loginBtn = document.querySelector('[data-login]');
 
-const dashboardUL = document.querySelector('[data-dashboardUL]');
+const dashboardUL = document.querySelector('[data-dashboardUL]') as HTMLDivElement ;
 const dashboardLink = document.querySelector('[data-dashboardLink]');
 const profileLink = document.querySelector('[data-profileLink]');
 
@@ -41,7 +41,7 @@ const dashbaordSection = document.querySelector('[data-dashbaordSection]');
 const profileSection = document.querySelector('[data-profileSection]');
 
 const userDashboardMenu = document.querySelector('[data-userDashboardMenu]');
-const userDashboardClose = document.querySelector('[data-userDashboardClose]');
+const userDashboardClose = document.querySelector('[data-userDashboardClose]') as HTMLButtonElement ;
 const userDashboardAside = document.querySelector('[data-userDashboardAside]');
 const userDashboardOverlay = document.querySelector('.overlay');
 
@@ -74,7 +74,7 @@ userDashboardClose?.addEventListener('click', () => {
 })
 
 if(dashboardUL){
-    Array.from(dashboardUL?.children)?.forEach(element1 => {
+    Array.from(dashboardUL?.children)?.forEach(element1  => {
         element1.addEventListener('click', () => {
             [...dashboardUL?.children].forEach(element2 => {
                 if(element1 == element2) return
@@ -196,9 +196,10 @@ submitReport?.addEventListener('click', () => {
     submitReportOverlay.classList.toggle('hide');
 })
 
-selectFile?.addEventListener('change',(e) => {
-    pickedFile = e.target.files[0];
-    selectedFile.innerText = e.target.files[0].name;
+selectFile?.addEventListener('change',(e: MouseEvent) => {
+    const target = e.target as HTMLInputElement;
+    pickedFile = target.files[0];
+    selectedFile.innerText = target.files[0].name;
 })
 
 report_case_btn?.addEventListener('click', () => {
@@ -239,7 +240,6 @@ prevStep3?.addEventListener('click', () => {
 menu?.addEventListener('click', () => {
     nav.classList.add('open');
 })
-
 
 closeBtn?.addEventListener('click', () => {
     nav.classList.remove('open');

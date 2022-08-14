@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <header class = "flex fixed top-0 left-0 z-[100] items-center shadow-sm px-[5%] bg-white h-[70px]  w-full">
+        <header class = "flex fixed top-0 left-0 z-[100] items-center shadow-sm px-[5%] bg-white h-[80px]  w-full">
             <div class="logo text-2xl font-bold">
                 <a href="#">
                     <img src="../../../images/logo.png" alt="logo">
@@ -35,14 +35,14 @@
         <main class = 'flex min-h-screen pt-[70px]'>
             <div class="overlay "></div>
             <aside data-userDashboardAside class="fixed h-full max-h-[calc(100vh-70px)] overflow-auto -left-[250px] z-10 lg:h-auto lg:static border-r transition-all duration-500 ease-in-out bg-white border-[gainsboro] w-[250px] lg:w-1/5 min-w-[250px] px-2" >
-                <div class="mt-10">
+                <div class="mt-16">
                     <ul data-dashboardUL class = 'flex flex-col  '>               
-                        <li id='dashboard' data-dashboardLink class="activeTab cursor-pointer py-2 mb-1 !pl-8 flex items-center gap-2" > <img class="w-5" src="../../../images/dashboard.svg" alt="dashboard"><span>Dashboard</span> </li>
-                        <li id="all-talent" data-profileLink class="flex items-center cursor-pointer py-2 mb-1 !pl-8 gap-3" > <img class = 'w-4' src="../../../images/user.svg" /> <span>All Talent</span>  </li>
-                        <li id="users" data-profileLink class="flex items-center cursor-pointer py-2 mb-1 !pl-8 gap-3" > <img class = 'w-4' src="../../../images/user.svg" /> <span>User</span>  </li>
-                        <li id="settings" class="flex items-center cursor-pointer py-2 mb-1 !pl-8 gap-2" > <img class="w-[22px]" src="../../../images/settings.svg" alt="settings"> <span>Settings</span> </li>
-                        <li id="report-center"  class="flex items-center cursor-pointer py-2 mb-1 !pl-8 gap-3" > <img class = 'w-4' src="../../../images/user.svg" /> <span>Report Center</span>  </li>
-                        <li id="logout" class="flex mt-10 items-center cursor-pointer py-2 mb-1 !pl-8 gap-[10px]" > <img class="brightness-0 w-5" src="../../../images/Logout.svg" alt="logout"> <span>Logout</span> </li>
+                        <li id='dashboard' data-dashboardLink class="activeTab cursor-pointer py-2 mb-1 !pl-8 grid grid-cols-[.14fr,1fr] items-center gap-3" > <img class="w-5" src="../../../images/dashboard.svg" alt="dashboard"><span>Dashboard</span> </li>
+                        <li id="all-talent" data-profileLink class="grid grid-cols-[.14fr,1fr] items-center cursor-pointer py-2 mb-1 !pl-8 gap-3" > <img class = 'w-5' src="../../../images/medal.png" /> <span>All Talent</span>  </li>
+                        <li id="users" data-profileLink class="grid grid-cols-[.14fr,1fr] items-center cursor-pointer py-2 mb-1 !pl-8 gap-3" > <img class = 'w-4' src="../../../images/user.svg" /> <span>User</span>  </li>
+                        <li id="settings" class="grid grid-cols-[.14fr,1fr] items-center cursor-pointer py-2 mb-1 !pl-8 gap-3" > <img class="w-[22px]" src="../../../images/settings.svg" alt="settings"> <span>Settings</span> </li>
+                        <li id="report-center"  class="grid grid-cols-[.14fr,1fr] items-center cursor-pointer py-2 mb-1 !pl-8 gap-3" > <img class = 'w-5' src="../../../images/report-center.png" /> <span>Report Center</span>  </li>
+                        <li id="logout" class="grid grid-cols-[.14fr,1fr] mt-10 items-center cursor-pointer py-2 mb-1 !pl-8 gap-3" > <img class="brightness-0 w-5" src="../../../images/Logout.svg" alt="logout"> <span>Logout</span> </li>
                     </ul>
                 </div>
             </aside>

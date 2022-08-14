@@ -814,6 +814,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: -0.5rem;
 }
 
+.mt-\[100px\] {
+  margin-top: 100px;
+}
+
+.mt-\[120px\] {
+  margin-top: 120px;
+}
+
+.mt-\[150px\] {
+  margin-top: 150px;
+}
+
 .block {
   display: block;
 }
@@ -834,8 +846,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
-.h-\[70px\] {
-  height: 70px;
+.h-\[100px\] {
+  height: 100px;
 }
 
 .h-4 {
@@ -900,6 +912,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .\!h-52 {
   height: 13rem !important;
+}
+
+.h-\[80px\] {
+  height: 80px;
 }
 
 .h-8 {
@@ -1175,6 +1191,22 @@ Ensure the default browser behavior of the `hidden` attribute.
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.grid-cols-\[\.3fr\2c 1fr\] {
+  grid-template-columns: .3fr 1fr;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-\[\.15fr\2c 1fr\] {
+  grid-template-columns: .15fr 1fr;
+}
+
+.grid-cols-\[\.14fr\2c 1fr\] {
+  grid-template-columns: .14fr 1fr;
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -1269,6 +1301,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .gap-\[10px\] {
   gap: 10px;
+}
+
+.gap-\[14px\] {
+  gap: 14px;
 }
 
 .space-x-8 > :not([hidden]) ~ :not([hidden]) {
@@ -1908,7 +1944,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 :root{
   --indicator-width: 100px;
   --questionHeight: 1px;
-  scroll-padding-top: 70px;
+  scroll-padding-top: 100px;
+}
+
+html{
+  scroll-padding-top: 100px;
 }
 
 .hide {

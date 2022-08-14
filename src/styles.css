@@ -5,7 +5,11 @@
 :root{
   --indicator-width: 100px;
   --questionHeight: 1px;
-  scroll-padding-top: 70px;
+  scroll-padding-top: 100px;
+}
+
+html{
+  scroll-padding-top: 100px;
 }
 
 .hide{
